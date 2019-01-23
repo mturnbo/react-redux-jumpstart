@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+
+	react-redux-jumpstart:
+    image: react-redux-jumpstart
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '8081:8081'
+    environment:
+      - NODE_ENV=development
