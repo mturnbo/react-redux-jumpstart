@@ -20,6 +20,9 @@ node_modules
 yarn.lock
 package-lock.json
 
+### Build ###
+dist/
+
 ### Logs ###
 logs
 *.log
