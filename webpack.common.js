@@ -31,10 +31,6 @@ module.exports = {
 		MiniCssExtractPluginConfig,
 		CleanWebpackPluginConfig
 	],
-	output: {
-		path: BUILD_PATH,
-		filename: 'bundle.js'
-	},
 	module: {
 		rules: [
 			{

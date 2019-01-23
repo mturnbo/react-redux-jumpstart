@@ -1,7 +1,7 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux app jumpstart.  Webpack, Babel, Jest, Docker.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
   "license": "MIT",
   "repository": {
@@ -48,8 +48,8 @@
     "react-dom": "^16.7.0"
   },
   "scripts": {
-    "dev": "webpack --mode development",
-		"build": "webpack --mode production",
+		"dev": "webpack-dev-server --mode development --config webpack.dev.js",
+		"build": "webpack --mode production --config webpack.prod.js",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js .",
     "test": "jest --config=jest.config.json"
   },
