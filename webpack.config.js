@@ -1,28 +1,55 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const BASE_PATH = path.resolve(__dirname, '');
+const MODULES_PATH = path.join(BASE_PATH, 'node_modules');
+const APP_PATH = path.join(BASE_PATH, 'src');
+const ASSETS_PATH = path.join(BASE_PATH, 'assets');
+const BUILD_PATH = path.join(BASE_PATH, 'dist');
+
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+	template: `${APP_PATH}/index.html`,
+	filename: 'index.html',
+	inject: 'body',
+	favicon: `${ASSETS_PATH}/images/favicon.ico`
+});
+
+const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
+	filename: 'styles.css'
+});
+
+const CleanWebpackPluginConfig = new CleanWebpackPlugin(['dist']);
 
 module.exports = {
 	entry: {
-		main: './src/index.js'
+		main: `${APP_PATH}/index.js`
 	},
+	plugins: [
+		HtmlWebpackPluginConfig,
+		MiniCssExtractPluginConfig,
+		CleanWebpackPluginConfig
+	],
 	output: {
-		path: path.resolve('./dist'),
-		filename: '[name].js'
+		path: BUILD_PATH,
+		filename: 'bundle.js'
 	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
-				exclude: /node_modules/,
-				use: [
-					{ loader: 'babel-loader' }
-				]
+				exclude: MODULES_PATH,
+				use: {
+					loader: 'babel-loader'
+				}
 			},
 			{
 				test: /\.(c|sa|sc)ss$/,
 				use: [
-					{ loader: 'style-loader' },
-					{ loader: 'css-loader' },
-					{ loader: 'sass-loader' }
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader'
 				]
 			}
 		]
