@@ -7,7 +7,6 @@ const BASE_PATH = path.resolve(__dirname, '');
 const MODULES_PATH = path.join(BASE_PATH, 'node_modules');
 const APP_PATH = path.join(BASE_PATH, 'src');
 const ASSETS_PATH = path.join(BASE_PATH, 'assets');
-const BUILD_PATH = path.join(BASE_PATH, 'dist');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 	template: `${APP_PATH}/index.html`,
@@ -49,5 +48,12 @@ module.exports = {
 				]
 			}
 		]
+	},
+	resolve: {
+		alias: {
+			assets: ASSETS_PATH,
+			components: path.join(APP_PATH, 'components')
+		},
+		extensions: ['.js', '.json', '.jsx']
 	}
 };

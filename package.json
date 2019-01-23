@@ -1,10 +1,21 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux App Jumpstart.",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
-	"keywords": ["react", "redux", "babel", "webpack", "jest", "enzyme", "docker", "nginx", "boilerplate", "jumpstart"],
-	"license": "MIT",
+  "keywords": [
+    "react",
+    "redux",
+    "babel",
+    "webpack",
+    "jest",
+    "enzyme",
+    "docker",
+    "nginx",
+    "boilerplate",
+    "jumpstart"
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mturnbo/react-redux-jumpstart.git"
@@ -41,7 +52,11 @@
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "@storybook/react": "^4.1.9",
+    "@storybook/addon-actions": "^4.1.9",
+    "@storybook/addon-links": "^4.1.9",
+    "@storybook/addons": "^4.1.9"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
@@ -49,11 +64,13 @@
     "react-dom": "^16.7.0"
   },
   "scripts": {
-		"dev": "webpack-dev-server --mode development --config webpack.dev.js",
-		"build": "webpack --mode production --config webpack.prod.js",
+    "dev": "webpack-dev-server --mode development --config webpack.dev.js",
+    "build": "webpack --mode production --config webpack.prod.js",
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js .",
     "test": "jest --config=jest.config.json",
-		"dockerbuild": "webpack --mode production --config webpack.prod.js && docker build -t react-babel-webpack-boilerplate:latest ."
-	},
+    "dockerbuild": "webpack --mode production --config webpack.prod.js && docker build -t react-babel-webpack-boilerplate:latest .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "main": "index.js"
 }

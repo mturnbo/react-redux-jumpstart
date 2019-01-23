@@ -10,6 +10,7 @@ This is a boilerplate for building a React / Redux application.
 * ESLint with Airbnb's style 
 * SCSS Styling
 * Jest with Enzyme
+* Storybook
 
 ## Quick Start
 1. Clone this repo using `git clone https://github.com/mturnbo/react-redux-jumpstart.git`
