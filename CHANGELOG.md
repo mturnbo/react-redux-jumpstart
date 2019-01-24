@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.0.5.0
+* *Feature*: Added Notifications
+
 #### v.0.4.0
 * *Feature*: Added routing with pages
 

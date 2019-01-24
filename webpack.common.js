@@ -60,6 +60,7 @@ module.exports = {
 			assets: ASSETS_PATH,
 			components: path.join(APP_PATH, 'components'),
 			pages:  path.join(APP_PATH, 'pages'),
+			actions: path.join(APP_PATH, 'actions'),
 			data: path.join(APP_PATH, 'data')
 		},
 		extensions: ['.js', '.json', '.jsx']

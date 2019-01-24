@@ -1,23 +1,15 @@
 import React from 'react';
 import {
 	HashRouter as Router,
-	Route,
-	NavLink,
-	Switch
+	NavLink
 } from 'react-router-dom';
-import {
-	HomePage,
-	AboutPage,
-	ContactPage,
-	ButtonsPage,
-	CardsPage,
-
-} from 'pages';
+import AppRoutes from '../../routes';
 import './App.scss';
+import NotificationContainer from 'components/Notification';
 
 const App = () => (
 	<Router>
-	<div className="app-container">
+		<div className="app-container">
 			<h1>React Redux Jumpstart</h1>
 			<div className="app-navigation">
 				<ul>
@@ -29,12 +21,10 @@ const App = () => (
 				</ul>
 			</div>
 			<div className="app-content">
-				<Route exact path="/" component={HomePage} />
-				<Route path="/about" component={AboutPage} />
-				<Route path="/buttons" component={ButtonsPage} />
-				<Route path="/cards" component={CardsPage} />
-				<Route path="/contact" component={ContactPage} />
+
+					<AppRoutes />
 			</div>
+			<NotificationContainer />
 		</div>
 	</Router>
 );
