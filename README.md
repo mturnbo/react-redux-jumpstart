@@ -7,14 +7,15 @@ This is a boilerplate for building a React / Redux application.
 * Card - avatars from https://icons8.com/icon/set/avatar/color
 
 ## Features:
-* React 16
+* React
 * Redux
 * Babel - ES6, ESNext, Airbnb and React/Recommended config
 * Webpack 4 with Webpack Dev Server
 * ESLint with Airbnb's style 
-* SCSS Styling
+* Sass Styling
 * Jest with Enzyme
 * Storybook
+* Docker w/ Nginx configuration
 
 ## Quick Start
 1. Clone this repo using `git clone https://github.com/mturnbo/react-redux-jumpstart.git`

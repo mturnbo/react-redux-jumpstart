@@ -3,24 +3,37 @@
 .card {
 	width: 200px;
 	height: 300px;
+	background-color: #F0FFFF;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	-webkit-border-radius: $border-radius;
 	-moz-border-radius: $border-radius;
 	border-radius: $border-radius;
 	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
 }
 
 .card-avatar {
 	width: 100%;
-	background-image: url('/assets/images/avatars/circled-user-female-skin-type-6-96.png');
+	margin: 10px;
+	text-align: center;
+
+	img {
+		width: 96px;
+		border: none;
+	}
 }
 
 .card-fullname {
+	margin: 10px 5px;
 	font-size: 18px;
 	font-weight: bold;
 }
 
 .card-title {
+	margin: 10px 5px;
 	font-size: 14px;
 	font-weight: normal;
 }

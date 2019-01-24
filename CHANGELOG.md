@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.0.3.2
+* *Feature*: Added Card component
+
 #### v.0.3.1
 * *Feature*: Added Button component
 

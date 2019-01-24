@@ -1,7 +1,7 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux App Jumpstart.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
   "keywords": [
     "react",
@@ -70,7 +70,7 @@
     "lint": "eslint --cache --ignore-path .gitignore --ext .jsx,.js .",
     "test": "jest --config=jest.config.json",
     "dockerbuild": "webpack --mode production --config webpack.prod.js && docker build -t react-babel-webpack-boilerplate:latest .",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./assets -p 6006",
     "build-storybook": "build-storybook"
   },
   "main": "index.js"

@@ -4,8 +4,8 @@ import './Card.scss';
 
 const Card = ({ fullname, title, avatar }) => (
 	<div className="card">
-		<div className="card-avatar" data-avatar={avatar}>
-			<img border="0" src={avatar} />
+		<div className="card-avatar">
+			<img src={`/assets/images/avatars/${avatar}.png`} />
 		</div>
 		<div className="card-fullname">{fullname}</div>
 		<div className="card-title">{title}</div>
@@ -19,7 +19,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-	avatar: '/assets/images/avatars/user-female-skin-type-5-96.png'
+	avatar: 'generic'
 };
 
 export default Card;
