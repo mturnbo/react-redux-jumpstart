@@ -20,7 +20,8 @@ module.exports = {
 	resolve: {
 		alias: {
 			assets: ASSETS_PATH,
-			components: path.join(APP_PATH, 'components')
+			components: path.join(APP_PATH, 'components'),
+			pages:  path.join(APP_PATH, 'pages')
 		},
 		extensions: ['.js', '.json', '.jsx']
 	}

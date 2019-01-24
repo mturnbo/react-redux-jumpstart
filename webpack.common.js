@@ -58,7 +58,9 @@ module.exports = {
 	resolve: {
 		alias: {
 			assets: ASSETS_PATH,
-			components: path.join(APP_PATH, 'components')
+			components: path.join(APP_PATH, 'components'),
+			pages:  path.join(APP_PATH, 'pages'),
+			data: path.join(APP_PATH, 'data')
 		},
 		extensions: ['.js', '.json', '.jsx']
 	}
