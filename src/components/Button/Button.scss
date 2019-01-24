@@ -1,5 +1,4 @@
-$btn-radius: 5px;
-$btn-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+@import 'assets/styles/variables.scss';
 
 .btn {
 	display: inline-block;
@@ -10,31 +9,31 @@ $btn-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	color: #FFFFFF;
 	font-size: 14px;
 	text-transform: uppercase;
-	-webkit-border-radius: $btn-radius;
-	-moz-border-radius: $btn-radius;
-	border-radius: $btn-radius;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
 
 	&:hover {
-		background: #434343;
-		-webkit-box-shadow: $btn-shadow;
-		-moz-box-shadow: $btn-shadow;
-		box-shadow: $btn-shadow;
+		background: $btn-hover;
+		-webkit-box-shadow: $shadow;
+		-moz-box-shadow: $shadow;
+		box-shadow: $shadow;
 		transition: all 0.4s ease 0s;
 	}
 
 	&.success {
-		background-color: #1cb841;
+		background-color: $btn-success;
 	}
 
 	&.error {
-		background-color: #ca3c3c;
+		background-color: $btn-error;
 	}
 
 	&.warning {
-		background-color: #df7514;
+		background-color: $btn-warning;
 	}
 
 	&.disabled {
-		background-color: #999999;
+		background-color: $btn-disabled;
 	}
 }

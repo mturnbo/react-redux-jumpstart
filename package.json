@@ -1,7 +1,7 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux App Jumpstart.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
   "keywords": [
     "react",
@@ -25,11 +25,16 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^4.1.9",
+    "@storybook/addon-links": "^4.1.9",
+    "@storybook/addons": "^4.1.9",
+    "@storybook/react": "^4.1.9",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^1.0.1",
+    "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
@@ -52,11 +57,7 @@
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",
-    "webpack-merge": "^4.2.1",
-    "@storybook/react": "^4.1.9",
-    "@storybook/addon-actions": "^4.1.9",
-    "@storybook/addon-links": "^4.1.9",
-    "@storybook/addons": "^4.1.9"
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
