@@ -1,5 +1,42 @@
-.app {
+.app-container {
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
+}
+
+.app-navigation {
+	background-color: #111;
+	padding: 0;
+
+	ul {
+		li {
+			display: inline;
+			list-style-type: none;
+			margin: 0;
+
+			a {
+				color: #FFF;
+				font-weight: bold;
+				text-decoration: none;
+				padding: 20px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.app-content {
+	border: 1px solid #666666;
+	background-color: #FFFFFF;
+	padding: 20px;
+	min-height: 400px;
+
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
 }

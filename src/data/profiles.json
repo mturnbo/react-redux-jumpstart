@@ -1,0 +1,36 @@
+[
+	{
+		"fullname": "Elijah McCoy",
+		"title": "Inventor",
+		"bio": "McCoy was credited for 50 inventions over the span of his career.  He is most famous for devising a method for automating the task of lubrication for trains.",
+		"avatar": "user-male"
+	},
+	{
+		"fullname": "Grace Kelly",
+		"title": "Actress",
+		"bio": "American actress known for her work in theatre, television and film.  She earned an Academy Award for Best Actress for the film The Country Girl.  She retired from acting after marrying Prince Rainier III of Monaco",
+		"avatar": "user-female"
+	},
+	{
+		"fullname": "Rei Toei",
+		"title": "Personality Construct",
+		"bio": "Artifical intelligence simulation of a human female pop singer embodied in a holographic projection.  Designed to learn and adapt based on interaction with humans.",
+		"avatar": "kawaii"
+	},
+	{
+		"fullname": "Ian William Geddes Johnson",
+		"title": "Cricketer",
+		"bio": "Australian cricketer who played 45 Test matches as a slow off-break bowler between 1946 and 1956",
+		"avatar": "user-male"
+	},
+	{
+		"fullname": "Anna Andreyevna Gorenko",
+		"title": "Poet",
+		"bio": "One of the most significant Russian poets of the 20th century. She was shortlisted for the Nobel Prize in 1965.  Her style, characterised by its economy and emotional restraint, was strikingly original and distinctive to her contemporaries.",
+		"avatar": "user-female"
+	}
+]
+
+
+
+

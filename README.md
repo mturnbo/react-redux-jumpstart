@@ -6,6 +6,11 @@ This is a boilerplate for building a React / Redux application.
 * Button
 * Card - avatars from https://icons8.com/icon/set/avatar/color
 
+## Pages
+* Home
+* About
+* Contact
+
 ## Features:
 * React
 * Redux
