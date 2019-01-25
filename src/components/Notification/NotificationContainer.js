@@ -9,9 +9,11 @@ import './NotificationContainer.scss';
 const NotificationContainer = ({ actions, notifications }) => {
 	const { removeNotification } = actions;
 	return (
-		<ul className="notification-container">
-			{notifications.map(notification => <Notification {...notification} key={notification.id} onDismissClick={() => removeNotification(notification.id)} />)}
-		</ul>
+		<div className="notification-container">
+			<ul>
+				{notifications.map(notification => <Notification {...notification} key={notification.id} onDismissClick={() => removeNotification(notification.id)} />)}
+			</ul>
+		</div>
 	);
 };
 
