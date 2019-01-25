@@ -1,7 +1,7 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux App Jumpstart.",
-  "version": "0.3.3",
+  "version": "0.5.1",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
   "keywords": [
     "react",
@@ -62,7 +62,11 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development --config webpack.dev.js",
