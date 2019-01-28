@@ -2,8 +2,9 @@ import {
 	ADD_NOTIFICATION,
 	REMOVE_NOTIFICATION
 } from '../constants/notificationConstants';
+import initialState from '../state/notificationState';
 
-export default function notifications(state = [], action) {
+export default (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_NOTIFICATION:
 			return [action.payload, ...state];

@@ -1,7 +1,10 @@
 # React Redux Jumpstart
 
-#### v.0.6.1
+#### v.0.6.2
 * *Update*: Added Modal functionality to Redux
+
+#### v.0.6.1
+* *Feature*: Added random content util
 
 #### v.0.6.0
 * *Feature*: Added Modal component
