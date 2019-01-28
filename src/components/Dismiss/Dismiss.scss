@@ -1,57 +1,4 @@
-@import 'assets/styles/variables.scss';
-
-.notification-item {
-	margin-bottom: 10px;
-	box-shadow: $shadow
-}
-
-.notification {
-	background-color: whitesmoke;
-	border-radius: $border-radius;
-	padding: 1.25rem 2.5rem 1.25rem 1.5rem;
-	position: relative;
-
-	a {
-		color: currentColor;
-		text-decoration: underline;
-	}
-
-	> .dismiss {
-		position: absolute;
-		right: 0.5rem;
-		top: 0.5rem;
-	}
-
-	&.primary {
-		background-color: $color-primary;
-	}
-
-	&.link {
-		background-color: $color-link;
-		color: $color-white;
-	}
-
-	&.info {
-		background-color: $color-info;
-		color: $color-white; }
-
-	&.success {
-		background-color: $color-success;
-		color: $color-white;
-	}
-
-	&.warning {
-		background-color: $color-warning;
-		color: $color-black;
-	}
-
-	&.danger {
-		background-color: $color-danger;
-		color: $color-white;
-	}
-}
-
-.delete {
+.dismiss {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	background-color: rgba(10, 10, 10, 0.2);
@@ -101,7 +48,7 @@
 	}
 }
 
-.delete::before, .delete::after {
+.dismiss::before, .dismiss::after {
 	background-color: white;
 	content: "";
 	display: block;
@@ -112,20 +59,20 @@
 	transform-origin: center center;
 }
 
-.delete::before {
+.dismiss::before {
 	height: 2px;
 	width: 50%;
 }
 
-.delete::after {
+.dismiss::after {
 	height: 50%;
 	width: 2px;
 }
 
-.delete:hover, .delete:focus {
+.dismiss:hover, .dismiss:focus {
 	background-color: rgba(10, 10, 10, 0.3);
 }
 
-.delete:active {
+.dismiss:active {
 	background-color: rgba(10, 10, 10, 0.4);
 }

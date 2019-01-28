@@ -14,7 +14,7 @@
 	border-radius: $border-radius;
 
 	&:hover {
-		background: $btn-hover;
+		background: $color-hover;
 		-webkit-box-shadow: $shadow;
 		-moz-box-shadow: $shadow;
 		box-shadow: $shadow;
@@ -22,18 +22,19 @@
 	}
 
 	&.success {
-		background-color: $btn-success;
+		background-color: $color-success;
 	}
 
 	&.error {
-		background-color: $btn-error;
+		background-color: $color-danger;
 	}
 
 	&.warning {
-		background-color: $btn-warning;
+		background-color: $color-warning;
+		color: $color-darkgrey;
 	}
 
 	&.disabled {
-		background-color: $btn-disabled;
+		background-color: $color-disabled;
 	}
 }
