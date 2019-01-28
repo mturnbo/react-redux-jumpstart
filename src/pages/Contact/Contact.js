@@ -1,11 +1,10 @@
 import React from 'react';
-import {getRandomSample} from "../../utils";
-import content from "../../data/content";
+import SampleContent from 'components/SampleContent';
 
 const ContactPage = () => (
   <div>
     <h2>Contact Us</h2>
-		<p>{getRandomSample(content.text, 5).join(' ')}</p>
+		<SampleContent paragraphLength={5} />
   </div>
 );
 

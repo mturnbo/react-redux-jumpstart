@@ -2,13 +2,12 @@ import React from 'react';
 import Card from 'components/Card';
 import profiles from 'data/profiles.json';
 import './Cards.scss';
-import {getRandomSample} from "../../utils";
-import content from "../../data/content";
+import SampleContent from 'components/SampleContent';
 
 const CardsPage = () => (
 	<div>
 		<h2>Cards</h2>
-		<p>{getRandomSample(content.text, 5).join(' ')}</p>
+		<SampleContent paragraphLength={5} />
 		<div className="card-container">
 			{profiles.map(profile => <Card {...profile} />)}
 		</div>

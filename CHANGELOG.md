@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.0.6.3
+* *Feature*: Added SampleContent component
+
 #### v.0.6.2
 * *Update*: Added Modal functionality to Redux
 

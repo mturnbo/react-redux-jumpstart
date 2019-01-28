@@ -1,13 +1,10 @@
 import React from 'react';
-import content from '../../data/content.json';
-import { getRandomSample } from '../../utils';
+import SampleContent from 'components/SampleContent';
 
 const HomePage = () => (
   <div>
     <h2>Home</h2>
-		<p>{getRandomSample(content.text, 5).join(' ')}</p>
-		<p>{getRandomSample(content.text, 5).join(' ')}</p>
-		<p>{getRandomSample(content.text, 5).join(' ')}</p>
+		<SampleContent numParagraphs={3} paragraphLength={5} />
   </div>
 );
 

@@ -5,8 +5,7 @@ import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
 import Button from 'components/Button';
-import { getRandomSample } from "../../utils";
-import content from "../../data/content";
+import SampleContent from 'components/SampleContent';
 
 const ButtonsPage = props => {
 	const randomNotification = () => {
@@ -30,7 +29,7 @@ const ButtonsPage = props => {
 	return (
 		<div>
 			<h2>Buttons</h2>
-			<p>{getRandomSample(content.text, 5).join(' ')}</p>
+			<SampleContent paragraphLength={5} />
 			<Button label="Default" />
 			<Button type="success" label="Success" />
 			<Button type="error" label="Error" />
