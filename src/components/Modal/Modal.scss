@@ -1,0 +1,52 @@
+@import 'assets/styles/variables.scss';
+
+.modal-container {
+	.hidden {
+		display: none;
+	}
+
+	.modal-overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 995;
+		background: rgba(0, 0, 0, 0.75);
+	}
+
+	.modal-popup {
+		z-index: 999;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 90%;
+		overflow: auto;
+		background: $color-white;
+		box-sizing: border-box;
+		box-shadow: $shadow;
+		border-radius: $border-radius;
+		padding: 20px;
+		width: 400px;
+		display: block;
+
+		.modal-title {
+			font-size: 16px;
+			font-weight: bold;
+			color: $color-black;
+			margin-bottom: 10px;
+		}
+
+		.modal-content {
+			font-size: 14px;
+			color: $color-darkgrey;
+		}
+
+		> .dismiss {
+			position: absolute;
+			right: 0.5rem;
+			top: 0.5rem;
+		}
+	}
+}

@@ -1,5 +1,11 @@
 # React Redux Jumpstart
 
+#### v.0.6.0
+* *Feature*: Added Modal component
+* *Feature*: Added Dismiss component
+* *Update*: Updated styles
+* *Update*: Updated tests
+
 #### v.0.5.0
 * *Feature*: Added Notifications
 
