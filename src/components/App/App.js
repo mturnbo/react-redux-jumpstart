@@ -8,6 +8,7 @@ import './App.scss';
 import NotificationContainer from 'components/Notification';
 import Modal from 'components/Modal';
 import content from '../../data/content.json';
+import { getRandomSample } from '../../utils';
 
 class App extends React.Component {
 	constructor(props) {
@@ -16,7 +17,7 @@ class App extends React.Component {
 			modal: {
 				display: true,
 				title: 'THIS IS A MODAL',
-				content: content.text[Math.floor(Math.random() * content.text.length)]
+				content: getRandomSample(content.text, 4).join(' ')
 			}
 		};
 		this.showModal = this.showModal.bind(this);

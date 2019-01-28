@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import Button from 'components/Button';
+import {getRandomSample} from "../../utils";
+import content from "../../data/content";
 
 const ButtonsPage = props => {
 	const randomNotification = () => {
@@ -21,12 +23,7 @@ const ButtonsPage = props => {
 	return (
 		<div>
 			<h2>Buttons</h2>
-			<p>
-				T-bone andouille cow beef ribs boudin, ball tip ribeye tail turkey shank pig picanha. Prosciutto capicola beef
-				brisket tail sirloin meatloaf frankfurter. Rump spare ribs turducken kielbasa tenderloin flank, jowl drumstick
-				tail jerky corned beef ham. Chuck rump pork andouille, meatball buffalo tongue venison. Pork belly tail salami
-				turducken short ribs swine landjaeger beef turkey buffalo drumstick shank meatball jerky.
-			</p>
+			<p>{getRandomSample(content.text, 5).join(' ')}</p>
 			<Button label="Default"/>
 			<Button type="success" label="Success"/>
 			<Button type="error" label="Error"/>
