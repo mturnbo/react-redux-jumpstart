@@ -1,26 +1,23 @@
 import React from 'react';
-import {
-	HashRouter as Router,
-	NavLink
-} from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import AppRoutes from '../../routes';
-import './App.scss';
+import {
+	Navigation,
+	NotificationContainer,
+	ModalContainer
+} from 'components/';
+/*
+import Navigation from 'components/Navigation';
 import NotificationContainer from 'components/Notification';
 import ModalContainer from 'components/Modal';
+*/
+import './App.scss';
 
 const App = () => (
 	<Router>
 		<div className="app-container">
 			<h1>React Redux Jumpstart</h1>
-			<div className="app-navigation">
-				<ul>
-					<li><NavLink to="/">Home</NavLink></li>
-					<li><NavLink to="/about">About</NavLink></li>
-					<li><NavLink to="/buttons">Buttons</NavLink></li>
-					<li><NavLink to="/cards">Cards</NavLink></li>
-					<li><NavLink to="/contact">Contact</NavLink></li>
-				</ul>
-			</div>
+			<Navigation />
 			<div className="app-content">
 				<AppRoutes />
 			</div>

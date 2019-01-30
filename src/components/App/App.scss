@@ -4,27 +4,6 @@
 	width: 100%;
 }
 
-.app-navigation {
-	background-color: #111;
-	padding: 0;
-
-	ul {
-		li {
-			display: inline;
-			list-style-type: none;
-			margin: 0;
-
-			a {
-				color: #FFF;
-				font-weight: bold;
-				text-decoration: none;
-				padding: 20px;
-				display: inline-block;
-			}
-		}
-	}
-}
-
 .app-content {
 	border: 1px solid #666666;
 	background-color: #FFFFFF;
