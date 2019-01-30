@@ -8,7 +8,7 @@ const Notification = ({ type, title, message, onDismissClick }) => {
 		<React.Fragment>
 			<li className="notification-item">
 				<div className={`notification ${type || ''}`}>
-					<Dismiss onClick={onDismissClick} />
+					<Dismiss dismissCallback={onDismissClick} />
 					<h2 className="title is-4">{title}</h2>
 					<p>{message}</p>
 				</div>
