@@ -5,6 +5,10 @@ This is a boilerplate for building a React / Redux application.
 ## Components
 * Button
 * Card - avatars from https://icons8.com/icon/set/avatar/color
+* Dismiss Button
+* Modal
+* Notification
+* SampleContent
 
 ## Pages
 * Home
@@ -26,6 +30,7 @@ This is a boilerplate for building a React / Redux application.
 1. Clone this repo using `git clone https://github.com/mturnbo/react-redux-jumpstart.git`
 1. Run `yarn` or `npm install` to install dependencies
 1. Run `npm run dev` or `yarn dev` to see the example app at `http://localhost:3000`
+1. Run `npm run build` or `yarn build` to build production bundle and output to `dist` folder
 
 ## Docker Configuration
 A Docker configuration is including to run with nginx inside a container:

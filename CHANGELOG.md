@@ -1,5 +1,9 @@
 # React Redux Jumpstart
 
+#### v.0.7.0
+* *Feature*: Navigation component
+* *Fix* *: Fixed callback for Dismiss component in Modal component
+
 #### v.0.6.3
 * *Feature*: Added SampleContent component
 
