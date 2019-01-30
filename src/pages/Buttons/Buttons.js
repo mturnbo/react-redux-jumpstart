@@ -6,6 +6,8 @@ import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
 import Button from 'components/Button';
 import SampleContent from 'components/SampleContent';
+import { getRandomSample } from '../../utils';
+import content from 'data/content.json';
 
 const ButtonsPage = props => {
 	const randomNotification = () => {

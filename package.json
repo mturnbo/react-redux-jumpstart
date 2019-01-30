@@ -1,7 +1,7 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux App Jumpstart.",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
   "keywords": [
     "react",
@@ -46,6 +46,7 @@
     "eslint-plugin-react": "^7.12.4",
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "jest-enzyme": "^7.0.1",
     "json-loader": "^0.5.7",

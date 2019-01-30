@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getRandomSample } from "../../utils";
-import content from "../../data/content";
+import { getRandomSample } from '../../utils';
+import content from 'data/content';
 import './SampleContent.scss';
 
 const SampleContent = ({ numParagraphs, paragraphLength }) => (
 	<div className="sample-content">
-		{Array.from(Array(numParagraphs)).map(i => <p key={i}>{getRandomSample(content.text, paragraphLength).join(' ')}</p>)}
+		{Array.from(Array(numParagraphs)).map((i, k) => <p key={k + 1}>{getRandomSample(content.text, paragraphLength).join(' ')}</p>)}
 	</div>
 );
 
