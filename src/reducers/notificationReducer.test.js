@@ -17,13 +17,13 @@ describe('notification reducer', () => {
   });
 
   it('should handle add notification', () => {
-    const expected = [
-      ...testNotification
-    ];
+    const expected = [{
+			...testNotification
+		}];
     expect(
-      reducer({}, {
+      reducer([], {
         type: ADD_NOTIFICATION,
-        ...testNotification
+        payload: {...testNotification}
       })
     ).toEqual(expected);
   });

@@ -5,7 +5,7 @@ import './Modal.scss';
 
 const Modal = ({ display, title, content, onDismissClick }) => {
 	return (
-		<div className={"modal-container " + display}>
+		<div className="modal">
 			<div className="modal-overlay"></div>
 			<div className="modal-popup">
 				<Dismiss onClick={onDismissClick} />
