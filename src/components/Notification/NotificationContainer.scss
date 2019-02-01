@@ -8,12 +8,10 @@
 	margin-bottom: 10px;
 	overflow: auto;
 	max-height: 100vh;
+	display: flex;
+	flex-direction: column;
 
 	&::-webkit-scrollbar {
 		display:none;
-	}
-
-	ul {
-		list-style-type: none;
 	}
 }

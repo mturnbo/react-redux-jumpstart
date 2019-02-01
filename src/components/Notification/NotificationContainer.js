@@ -10,9 +10,7 @@ const NotificationContainer = ({ actions, notifications }) => {
 	const { removeNotification } = actions;
 	return (
 		<div className="notification-container">
-			<ul>
-				{notifications.map(notification => <Notification {...notification} key={notification.id} onDismissClick={() => removeNotification(notification.id)} />)}
-			</ul>
+			{notifications.map(notification => <Notification {...notification} key={notification.id} onDismissClick={() => removeNotification(notification.id)} />)}
 		</div>
 	);
 };
