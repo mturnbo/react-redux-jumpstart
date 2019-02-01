@@ -6,9 +6,9 @@ import './Notification.scss';
 const Notification = ({ type, title, message, onDismissClick }) => {
 	return (
 		<React.Fragment>
-			<li className="notification-item">
+			<li className="notification-item dismiss-effect">
 				<div className={`notification ${type || ''}`}>
-					<Dismiss dismissCallback={onDismissClick} containerClass=".notification-item" />
+					<Dismiss dismissCallback={onDismissClick} />
 					<h2 className="title is-4">{title}</h2>
 					<p>{message}</p>
 				</div>

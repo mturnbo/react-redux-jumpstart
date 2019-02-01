@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { fadeOut, slideUp} from '../../utils';
 import './Dismiss.scss';
 
-const Dismiss = ({ dismissCallback, effect='slideUp', containerClass = '' }) => {
+const Dismiss = ({ dismissCallback, effect='slideUp' }) => {
 	const dismiss = (e) => {
+		const containerClass = '.dismiss-effect';
 		if (containerClass) {
 			if (effect === 'slideUp') {
 				slideUp(e, containerClass).then(dismissCallback);
