@@ -6,11 +6,7 @@ import {
 	NotificationContainer,
 	ModalContainer
 } from 'components/';
-/*
-import Navigation from 'components/Navigation';
-import NotificationContainer from 'components/Notification';
-import ModalContainer from 'components/Modal';
-*/
+
 import './App.scss';
 
 const App = () => (

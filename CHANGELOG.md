@@ -1,8 +1,7 @@
 # React Redux Jumpstart
 
 #### v.0.8.0
-* *Feature*: Notification fade-out / sleid-up on dismiss 
-
+* *Feature*: Notification fade-out / slide-up on dismiss 
 
 #### v.0.7.0
 * *Feature*: Navigation component
