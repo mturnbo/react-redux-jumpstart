@@ -1,8 +1,10 @@
 # React Redux Jumpstart
 
+#### v.0.9.0
+* *Feature*: Popup container for Notifications and Modals
+
 #### v.0.8.0
 * *Feature*: Notification fade-out / sleid-up on dismiss 
-
 
 #### v.0.7.0
 * *Feature*: Navigation component

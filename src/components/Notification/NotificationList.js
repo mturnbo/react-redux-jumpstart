@@ -4,18 +4,18 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { removeNotification } from 'actions/notificationActions';
 import Notification from './Notification';
-import './NotificationContainer.scss';
+import './NotificationList.scss';
 
-const NotificationContainer = ({ actions, notifications }) => {
+const NotificationList = ({ actions, notifications }) => {
 	const { removeNotification } = actions;
 	return (
-		<div className="notification-container">
+		<div className="notification-list">
 			{notifications.map(notification => <Notification {...notification} key={notification.id} onDismissClick={() => removeNotification(notification.id)} />)}
 		</div>
 	);
 };
 
-NotificationContainer.propTypes = {
+NotificationList.propTypes = {
 	actions: PropTypes.shape({
 		removeNotification: PropTypes.func.isRequired
 	}).isRequired,
@@ -30,4 +30,4 @@ const mapStateToProps = state => ({
 	notifications: state.notifications
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NotificationContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(NotificationList);

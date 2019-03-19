@@ -3,14 +3,10 @@ import { HashRouter as Router } from 'react-router-dom';
 import AppRoutes from '../../routes';
 import {
 	Navigation,
-	NotificationContainer,
+	NotificationList,
 	ModalContainer
 } from 'components/';
-/*
-import Navigation from 'components/Navigation';
-import NotificationContainer from 'components/Notification';
-import ModalContainer from 'components/Modal';
-*/
+
 import './App.scss';
 
 const App = () => (
@@ -22,7 +18,7 @@ const App = () => (
 				<AppRoutes />
 			</div>
 			<ModalContainer />
-			<NotificationContainer />
+			<NotificationList />
 		</div>
 	</Router>
 );
