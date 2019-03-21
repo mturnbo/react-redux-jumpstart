@@ -1,0 +1,18 @@
+@import 'assets/styles/variables.scss';
+
+.counter {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #666666;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
+	padding: 10px;
+	background-color: #F5F5DC;
+
+	.count {
+		font-size: 36px;
+		font-weight: bold;
+		color: blue;
+	}
+}

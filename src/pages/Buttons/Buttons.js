@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
-import Button from 'components/Button';
-import Content from 'components/Content';
 import { getRandomSample } from '../../utils';
 import content from 'data/content.json';
+import {
+	Button,
+	Content,
+	Counter
+} from 'components/';
 
 const ButtonsPage = props => {
 	const randomNotification = () => {
@@ -37,6 +40,8 @@ const ButtonsPage = props => {
 			<Button type="warning" label="Warning" />
 			<Button label="Notification" onClick={randomNotification} />
 			<Button label="Modal" onClick={showModal} />
+			<br />
+			<Counter />
 		</div>
 	);
 };
