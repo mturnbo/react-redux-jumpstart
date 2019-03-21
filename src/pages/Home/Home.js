@@ -1,10 +1,9 @@
 import React from 'react';
-import SampleContent from 'components/SampleContent';
+import Content from 'components/Content';
 
 const HomePage = () => (
   <div>
-    <h2>Home</h2>
-		<SampleContent numParagraphs={3} paragraphLength={5} />
+		<Content title="Home" sampleLenght="5" />
   </div>
 );
 

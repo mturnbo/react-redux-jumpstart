@@ -8,7 +8,7 @@ This is a boilerplate for building a React / Redux application.
 * Dismiss Button
 * Modal
 * Notification
-* SampleContent
+* Content
 
 ## Pages
 * Home

@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
 import Button from 'components/Button';
-import SampleContent from 'components/SampleContent';
+import Content from 'components/Content';
 import { getRandomSample } from '../../utils';
 import content from 'data/content.json';
 
@@ -30,8 +30,7 @@ const ButtonsPage = props => {
 
 	return (
 		<div>
-			<h2>Buttons</h2>
-			<SampleContent paragraphLength={5} />
+			<Content title="Buttons" />
 			<Button label="Default" />
 			<Button type="success" label="Success" />
 			<Button type="error" label="Error" />

@@ -1,3 +1,5 @@
+import content from 'data/content';
+
 export function generateNumArray(n) {
 	return Array.from({length: n}, (v, k) => k + 1);
 }
@@ -67,4 +69,19 @@ export function slideUp(e, containerClass, intervalTimeout = 10) {
 			resolve('no-effect-target');
 		}
 	});
+}
+
+function* contentGenerator(type = 'text') {
+	for (let item of content[type]) {
+		yield item;
+	}
+}
+
+export function getContent(length) {
+	const generator = contentGenerator();
+	let content = [];
+	for (let i = 0; i < length; i++) {
+		content.push(generator.next().value);
+	};
+	return content.join(' ');
 }

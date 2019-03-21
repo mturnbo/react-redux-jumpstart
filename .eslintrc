@@ -4,7 +4,14 @@
 		"browser": true
 	},
 	"rules": {
-		"max-len": ["error", {"code": 120}],
+		"indent": ["error", 2],
+		"max-len": ["error", {
+			"code": 120,
+			"ignoreComments": true,
+			"ignoreUrls": true,
+			"ignoreStrings": true,
+			"ignoreTemplateLiterals": true
+		}],
 		"arrow-parens": 0,
 		"comma-dangle": 0,
 		"react/prefer-stateless-function": 0,

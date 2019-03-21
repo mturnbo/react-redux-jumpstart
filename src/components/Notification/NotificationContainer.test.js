@@ -2,9 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import NotificationContainer from './NotificationContainer';
 
+const wrapper = shallow(<NotificationContainer />);
+
 describe('NotificationContainer', () => {
-	test('should contain content container', () => {
-		const wrapper = shallow(<SampleContent />);
-		expect(wrapper.contains(<div className="sample-content">)).to.equal(true);
+	it('should match snapshot', () => {
+		expect(wrapper).toMatchSnapshot();
 	});
 });

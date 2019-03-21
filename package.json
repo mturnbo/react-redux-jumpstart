@@ -1,7 +1,7 @@
 {
   "name": "react-redux-jumpstart",
   "description": "React Redux App Jumpstart.",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "author": "Marcus Turnbo <marcus@emarcus.com>",
   "keywords": [
     "react",
@@ -33,6 +33,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
@@ -61,13 +62,15 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-		"prop-types": "^15.7.2",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
-		"react-redux": "^6.0.1",
-		"react-router-dom": "^5.0.0",
-		"redux": "^4.0.1",
-		"redux-thunk": "^2.3.0"
+    "@babel/polyfill": "^7.4.0",
+    "@babel/runtime": "^7.4.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development --config webpack.dev.js",

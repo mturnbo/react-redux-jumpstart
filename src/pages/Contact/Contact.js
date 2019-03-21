@@ -1,10 +1,9 @@
 import React from 'react';
-import SampleContent from 'components/SampleContent';
+import Content from 'components/Content';
 
 const ContactPage = () => (
   <div>
-    <h2>Contact Us</h2>
-		<SampleContent paragraphLength={5} />
+		<Content title="Contact Us" />
   </div>
 );
 

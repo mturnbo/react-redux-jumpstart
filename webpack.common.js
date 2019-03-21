@@ -30,6 +30,7 @@ module.exports = {
 	entry: {
 		main: `${APP_PATH}/index.js`
 	},
+	mode: 'development',
 	plugins: [
 		HtmlWebpackPluginConfig,
 		MiniCssExtractPluginConfig,

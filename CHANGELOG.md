@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.0.8.5
+* *Feature*: Added Content Generator
+
 #### v.0.8.0
 * *Feature*: Notification fade-out / slide-up on dismiss 
 
@@ -8,7 +11,7 @@
 * *Fix* *: Fixed callback for Dismiss component in Modal component
 
 #### v.0.6.3
-* *Feature*: Added SampleContent component
+* *Feature*: Added Content component
 
 #### v.0.6.2
 * *Update*: Added Modal functionality to Redux
