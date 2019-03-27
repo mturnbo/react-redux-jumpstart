@@ -27,14 +27,16 @@
 		"json"
 	],
 	"moduleDirectories": [
-		"node_modules"
+		"node_modules",
+		"src"
 	],
 	"moduleNameMapper": {
 		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
 		"^.+\\.(css|less|scss)$": "identity-obj-proxy",
 		"^components(.*)$": "<rootDir>/src/components$1",
 		"^pages(.*)$": "<rootDir>/src/pages$1",
-		"^data(.*)$": "<rootDir>/src/data$1"
+		"^data(.*)$": "<rootDir>/src/data$1",
+		"^actions(.*)$": "<rootDir>/src/actions$1"
 	},
 	"unmockedModulePathPatterns": [
 		"react"

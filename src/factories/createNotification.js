@@ -1,8 +1,10 @@
 let id = 0;
 
 export default function createNotification(options) {
-	return {
-		...options,
-		id: id++
-	};
-};
+  const notification = {
+    ...options,
+    id: id += 1
+  };
+
+  return notification;
+}

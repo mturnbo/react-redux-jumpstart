@@ -1,17 +1,16 @@
 import React from 'react';
 import Card from 'components/Card';
-import SampleContent from 'components/SampleContent';
+import Content from 'components/Content';
 import profiles from 'data/profiles.json';
 import './Cards.scss';
 
 const CardsPage = () => (
-	<div>
-		<h2>Cards</h2>
-		<SampleContent paragraphLength={5} />
-		<div className="card-container">
-			{profiles.map((profile, index) => <Card key={index} {...profile} />)}
-		</div>
-	</div>
+  <div>
+    <Content title="Cards" sampleLength="3" />
+    <div className="card-container">
+      {profiles.map((profile) => <Card key={profile.id} {...profile} />)}
+    </div>
+  </div>
 );
 
 export default CardsPage;

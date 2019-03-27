@@ -1,4 +1,4 @@
-import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from '../constants/notificationConstants';
+import { ADD_NOTIFICATION } from '../constants/notificationConstants';
 import reducer from './notificationReducer';
 import initialState from '../state/notificationState';
 
@@ -18,12 +18,12 @@ describe('notification reducer', () => {
 
   it('should handle add notification', () => {
     const expected = [{
-			...testNotification
-		}];
+      ...testNotification
+    }];
     expect(
       reducer([], {
         type: ADD_NOTIFICATION,
-        payload: {...testNotification}
+        payload: { ...testNotification }
       })
     ).toEqual(expected);
   });

@@ -3,5 +3,5 @@ import modalConstants from './modalConstants';
 
 export default {
   notificationConstants,
-	modalConstants
+  modalConstants
 };

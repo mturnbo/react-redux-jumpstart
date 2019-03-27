@@ -6,8 +6,8 @@ const BASE_PATH = path.resolve(__dirname, '');
 const BUILD_PATH = path.join(BASE_PATH, 'dist');
 
 module.exports = merge(common, {
-	output: {
-		path: BUILD_PATH,
-		filename: 'bundle.js'
-	}
+  output: {
+    path: BUILD_PATH,
+    filename: 'bundle.js'
+  }
 });

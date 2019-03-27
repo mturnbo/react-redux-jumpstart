@@ -5,7 +5,7 @@ import * as modalActions from './modalActions';
 
 const actions = bindActionCreators({
   ...notificationActions,
-	...modalActions
+  ...modalActions
 }, store.dispatch);
 
 export default actions;
