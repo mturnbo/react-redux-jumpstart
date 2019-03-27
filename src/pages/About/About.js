@@ -3,7 +3,7 @@ import Content from 'components/Content';
 
 const AboutPage = () => (
   <div>
-		<Content title="About Us" />
+    <Content title="About Us" />
   </div>
 );
 

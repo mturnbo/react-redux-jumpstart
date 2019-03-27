@@ -6,28 +6,31 @@ import { removeNotification } from 'actions/notificationActions';
 import Notification from './Notification';
 import './NotificationContainer.scss';
 
-const NotificationContainer = ({ actions, notifications }) => {
-	const { removeNotification } = actions;
-	return (
-		<div className="notification-container">
-			{notifications.map(notification => <Notification {...notification} key={notification.id} onDismissClick={() => removeNotification(notification.id)} />)}
-		</div>
-	);
-};
+const NotificationContainer = ({ actions, notifications }) => (
+  <div className="notification-container">
+    {notifications.map(notification => (
+      <Notification
+        {...notification}
+        key={notification.id}
+        onDismissClick={() => actions.removeNotification(notification.id)}
+      />
+    ))}
+  </div>
+);
 
 NotificationContainer.propTypes = {
-	actions: PropTypes.shape({
-		removeNotification: PropTypes.func.isRequired
-	}).isRequired,
-	notifications: PropTypes.arrayOf(PropTypes.object).isRequired
+  actions: PropTypes.shape({
+    removeNotification: PropTypes.func.isRequired
+  }).isRequired,
+  notifications: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const mapDispatchToProps = dispatch => ({
-	actions: bindActionCreators({ removeNotification }, dispatch)
+  actions: bindActionCreators({ removeNotification }, dispatch)
 });
 
 const mapStateToProps = state => ({
-	notifications: state.notifications
+  notifications: state.notifications
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NotificationContainer);

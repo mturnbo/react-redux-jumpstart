@@ -1,5 +1,5 @@
 export default {
-	display: false,
-	title: '',
-	content: ''
+  display: false,
+  title: '',
+  content: ''
 };

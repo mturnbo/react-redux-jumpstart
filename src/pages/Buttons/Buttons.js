@@ -4,57 +4,52 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
-import { getRandomSample } from '../../utils';
 import content from 'data/content.json';
 import {
-	Button,
-	Content,
-	Counter
+  Button,
+  Content,
+  Counter
 } from 'components/';
+import { getRandomSample, getNotification } from '../../utils';
 
 const ButtonsPage = props => {
-	const randomNotification = () => {
-		const types = ['primary', 'link', 'info', 'success', 'warning', 'danger'];
-		const notificationType = types[Math.floor(Math.random() * types.length)];
-		const d = new Date().toString();
-		props.actions.addNotification({
-			type: notificationType,
-			title: notificationType.toUpperCase(),
-			message: `${d} ${getRandomSample(content.text, 2).join(' ')}`
-		});
-	};
+  const displayRandomNotification = () => {
+    props.actions.addNotification(getNotification());
+  };
 
-	const showModal = () => {
-		props.actions.showModal({
-			title: 'THIS IS A MODAL',
-			content: getRandomSample(content.text, 2).join(' ')
-		});
-	};
+  const displayModal = () => {
+    props.actions.showModal({
+      title: 'THIS IS A MODAL',
+      content: getRandomSample(content.text, 2).join(' ')
+    });
+  };
 
-	return (
-		<div>
-			<Content title="Buttons" />
-			<Button label="Default" />
-			<Button type="success" label="Success" />
-			<Button type="error" label="Error" />
-			<Button type="warning" label="Warning" />
-			<Button label="Notification" onClick={randomNotification} />
-			<Button label="Modal" onClick={showModal} />
-			<br />
-			<Counter />
-		</div>
-	);
+  /* eslint-disable no-console */
+  return (
+    <div>
+      <Content title="Buttons" />
+      <Button label="Default" onClick={() => console.log('default')} />
+      <Button type="success" label="Success" onClick={() => console.log('success')} />
+      <Button type="error" label="Error" onClick={() => console.log('error')} />
+      <Button type="warning" label="Warning" onClick={() => console.log('warning')} />
+      <Button label="Notification" onClick={displayRandomNotification} />
+      <Button label="Modal" onClick={displayModal} />
+      <br />
+      <Counter />
+    </div>
+  );
+  /* eslint-enable no-console */
 };
 
 ButtonsPage.propTypes = {
-	actions: PropTypes.shape({
-		addNotification: PropTypes.func.isRequired,
-		showModal: PropTypes.func.isRequired
-	}).isRequired
+  actions: PropTypes.shape({
+    addNotification: PropTypes.func.isRequired,
+    showModal: PropTypes.func.isRequired
+  }).isRequired
 };
 
 const mapDispatchToProps = dispatch => ({
-	actions: bindActionCreators({ addNotification, showModal }, dispatch)
+  actions: bindActionCreators({ addNotification, showModal }, dispatch)
 });
 
 export default connect(null, mapDispatchToProps)(ButtonsPage);

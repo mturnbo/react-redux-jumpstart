@@ -5,8 +5,8 @@ import Dismiss from './Dismiss';
 const mockCallBack = jest.fn();
 
 describe('Dismiss', () => {
-	test('should match snapshot', () => {
-		const wrapper = shallow(<Dismiss onClick={mockCallBack} />);
-		expect(wrapper).toMatchSnapshot();
-	});
+  test('should match snapshot', () => {
+    const wrapper = shallow(<Dismiss onClick={mockCallBack} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

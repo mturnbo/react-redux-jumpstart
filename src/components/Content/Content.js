@@ -4,20 +4,22 @@ import { getContent } from '../../utils';
 import './Content.scss';
 
 const Content = ({ title, text, sampleLength }) => (
-	<div className="content">
-		{title && <div className="title">{title}</div>}
-		<div className="text">{text || getContent(sampleLength)}</div>
-	</div>
+  <div className="content">
+    {title && <div className="title">{title}</div>}
+    <div className="text">{text || getContent(sampleLength)}</div>
+  </div>
 );
 
 Content.propTypes = {
-	title: PropTypes.string,
-	text: PropTypes.string,
-	sampleLength: PropTypes.number
+  title: PropTypes.string,
+  text: PropTypes.string,
+  sampleLength: PropTypes.number
 };
 
 Content.defaultProps = {
-	sampleLength: 2
+  title: '[Content Title]',
+  text: '',
+  sampleLength: 2
 };
 
 export default Content;

@@ -3,7 +3,7 @@ import Content from 'components/Content';
 
 const ContactPage = () => (
   <div>
-		<Content title="Contact Us" />
+    <Content title="Contact Us" />
   </div>
 );
 
