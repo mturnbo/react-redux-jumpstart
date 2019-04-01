@@ -1,19 +1,13 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
-const BASE_PATH = path.resolve(__dirname, '');
-const MODULES_PATH = path.join(BASE_PATH, 'node_modules');
-const APP_PATH = path.join(BASE_PATH, 'src');
-const ASSETS_PATH = path.join(BASE_PATH, 'assets');
+const paths = require('./paths');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: `${APP_PATH}/index.html`,
+  template: `${paths.APP_PATH}/index.html`,
   filename: 'index.html',
   inject: 'body',
-  favicon: `${ASSETS_PATH}/images/favicon.ico`
+  favicon: `${paths.ASSETS_PATH}/images/favicon.ico`
 });
 
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
@@ -24,24 +18,21 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   { from: 'assets/images', to: 'assets/images' }
 ]);
 
-const CleanWebpackPluginConfig = new CleanWebpackPlugin(['dist']);
-
 module.exports = {
   entry: {
-    main: `${APP_PATH}/index.js`
+    main: `${paths.APP_PATH}/index.js`
   },
   mode: 'development',
   plugins: [
     HtmlWebpackPluginConfig,
     MiniCssExtractPluginConfig,
-    CopyWebpackPluginConfig,
-    CleanWebpackPluginConfig
+    CopyWebpackPluginConfig
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: MODULES_PATH,
+        exclude: paths.MODULES_PATH,
         use: {
           loader: 'babel-loader'
         }
@@ -58,11 +49,11 @@ module.exports = {
   },
   resolve: {
     alias: {
-      assets: ASSETS_PATH,
-      components: path.join(APP_PATH, 'components'),
-      pages: path.join(APP_PATH, 'pages'),
-      actions: path.join(APP_PATH, 'actions'),
-      data: path.join(APP_PATH, 'data')
+      assets: paths.ASSETS_PATH,
+      components: paths.COMPONENTS_PATH,
+      pages: paths.PAGES_PATH,
+      actions: paths.ACTIONS_PATH,
+      data: paths.DATA_PATH
     },
     extensions: ['.js', '.json', '.jsx']
   }

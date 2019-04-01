@@ -44,7 +44,9 @@
 	"testMatch": [
 		"**/?(*.)(spec|test).js?(x)"
 	],
-	"setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+	"setupFilesAfterEnv": [
+		"./node_modules/jest-enzyme/lib/index.js"
+	],
 	"setupFiles": [
 		"<rootDir>/test-utils/enzyme.setup.js"
 	],

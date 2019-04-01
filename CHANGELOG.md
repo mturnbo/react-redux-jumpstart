@@ -1,5 +1,11 @@
 # React Redux Jumpstart
 
+#### v.0.8.7
+* *Configuration*: Updated Jest config
+* *Configuration*: Updated Docker image name
+* *Configuration*: Updated Webpack prod config
+* *Configuration*: Added paths file
+
 #### v.0.8.5
 * *Feature*: Added Content Generator
 
