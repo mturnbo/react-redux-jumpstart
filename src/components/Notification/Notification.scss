@@ -1,4 +1,4 @@
-@import 'assets/styles/variables.scss';
+@import 'assets/styles/modules/all';
 
 .notification-item {
 	margin-bottom: 10px;
@@ -23,30 +23,30 @@
 	}
 
 	&.primary {
-		background-color: $color-primary;
+		background-color: $primary;
 	}
 
 	&.link {
-		background-color: $color-link;
-		color: $color-white;
+		background-color: $link;
+		color: $white;
 	}
 
 	&.info {
-		background-color: $color-info;
-		color: $color-white; }
+		background-color: $info;
+		color: $white; }
 
 	&.success {
-		background-color: $color-success;
-		color: $color-white;
+		background-color: $success;
+		color: $white;
 	}
 
 	&.warning {
-		background-color: $color-warning;
-		color: $color-black;
+		background-color: $warning;
+		color: $black;
 	}
 
 	&.danger {
-		background-color: $color-danger;
-		color: $color-white;
+		background-color: $danger;
+		color: $white;
 	}
 }

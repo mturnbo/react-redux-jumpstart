@@ -1,4 +1,4 @@
-@import 'assets/styles/variables.scss';
+@import 'assets/styles/modules/all';
 
 .btn {
 	display: inline-block;
@@ -14,7 +14,7 @@
 	border-radius: $border-radius;
 
 	&:hover {
-		background: $color-hover;
+		background: $hover;
 		-webkit-box-shadow: $shadow;
 		-moz-box-shadow: $shadow;
 		box-shadow: $shadow;
@@ -22,19 +22,19 @@
 	}
 
 	&.success {
-		background-color: $color-success;
+		background-color: $success;
 	}
 
 	&.error {
-		background-color: $color-danger;
+		background-color: $danger;
 	}
 
 	&.warning {
-		background-color: $color-warning;
-		color: $color-darkgrey;
+		background-color: $warning;
+		color: $darkgrey;
 	}
 
 	&.disabled {
-		background-color: $color-disabled;
+		background-color: $disabled;
 	}
 }

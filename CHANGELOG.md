@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.0.8.8
+* *Update*: Reorganized stylesheet file structure
+
 #### v.0.8.7
 * *Configuration*: Updated Jest config
 * *Configuration*: Updated Docker image name
