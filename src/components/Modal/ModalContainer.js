@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { showModal, hideModal } from 'actions/modalActions';
+import { hideModal } from 'actions/modalActions';
 import Modal from './Modal';
 
 class ModalContainer extends React.Component {
@@ -12,7 +11,7 @@ class ModalContainer extends React.Component {
   }
 
   closeModal() {
-    this.props.actions.hideModal(); // eslint-disable-line react/destructuring-assignment
+    this.props.hide(); // eslint-disable-line react/destructuring-assignment
   }
 
   render() {
@@ -26,13 +25,10 @@ class ModalContainer extends React.Component {
 }
 
 ModalContainer.propTypes = {
-  actions: PropTypes.shape({
-    showModal: PropTypes.func.isRequired,
-    hideModal: PropTypes.func.isRequired
-  }).isRequired,
   display: PropTypes.bool.isRequired,
   title: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  hide: PropTypes.func.isRequired
 };
 
 ModalContainer.defaultProps = {
@@ -41,7 +37,7 @@ ModalContainer.defaultProps = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ showModal, hideModal }, dispatch)
+  hide: () => dispatch(hideModal())
 });
 
 const mapStateToProps = state => {
