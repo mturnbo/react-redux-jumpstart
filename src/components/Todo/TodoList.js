@@ -1,17 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { toggleTodoItem } from 'actions/todoActions';
+import { toggleTodoItem, removeTodoItem } from 'actions/todoActions';
 import TodoItem from './TodoItem';
+import AddTodo from './AddTodo';
 import './TodoList.scss';
 
-const TodoList = ({ items, toggle }) => (
+const TodoList = ({ items, toggle, remove }) => (
   <div className="todo-list">
-    <ul>
-      {items.map(item => (
-        <TodoItem key={item.id} {...item} onClick={() => toggle(item.id)} />
-      ))}
-    </ul>
+    <h2>Todo List</h2>
+    <hr />
+    <AddTodo />
+    {items.map(item => (
+      <TodoItem
+        {...item}
+        toggle={() => toggle(item.id)}
+        remove={() => remove(item.id)}
+        key={item.id}
+      />
+    ))}
   </div>
 );
 
@@ -23,7 +30,8 @@ TodoList.propTypes = {
       complete: PropTypes.bool.isRequired
     }).isRequired
   ).isRequired,
-  toggle: PropTypes.func.isRequired
+  toggle: PropTypes.func.isRequired,
+  remove: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -31,7 +39,8 @@ const mapStateToProps = state => ({
 });
 
 const mapsDispatchToProps = dispatch => ({
-  toggle: id => dispatch(toggleTodoItem(id))
+  toggle: id => dispatch(toggleTodoItem(id)),
+  remove: id => dispatch(removeTodoItem(id))
 });
 
 export default connect(mapStateToProps, mapsDispatchToProps)(TodoList);

@@ -18,7 +18,7 @@ export default (state = initialState, action) => {
         }
       ];
     case REMOVE_TODO:
-      return state.filter(todo => todo.id !== action.id);
+      return state.filter(todo => todo.id !== action.payload);
     case TOGGLE_TODO:
       return state.map(todo => (todo.id === action.payload ? { ...todo, complete: !todo.complete } : todo));
     default:

@@ -2,21 +2,11 @@
 
 .todo-list {
 	max-width: 300px;
-
-	ul {
-		list-style-type: none;
-	}
-
-	li {
-		text-transform: uppercase;
-		background-color: #CECECE;
-		color: $black;
-		padding: 5px;
-		margin-bottom: 3px;
-
-		&:hover {
-			background-color: #CCCCCC;
-			font-weight: bold;
-		}
-	}
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $darkgrey;
+	padding: 10px;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
 }

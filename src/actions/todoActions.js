@@ -11,10 +11,10 @@ export const addTodoItem = text => ({
 
 export const removeTodoItem = id => ({
   type: REMOVE_TODO,
-  id
+  payload: id
 });
 
 export const toggleTodoItem = id => ({
   type: TOGGLE_TODO,
-  id
+  payload: id
 });
