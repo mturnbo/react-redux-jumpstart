@@ -1,0 +1,17 @@
+@import 'assets/styles/modules/all';
+
+.add-todo {
+	form {
+		input {
+			display: inline-block;
+			margin: 10px;
+			padding: 5px 20px;
+			border: 1px solid $black;
+			font-size: 14px;
+			text-transform: uppercase;
+			-webkit-border-radius: $border-radius;
+			-moz-border-radius: $border-radius;
+			border-radius: $border-radius;
+		}
+	}
+}

@@ -16,7 +16,7 @@ storiesOf('Button', module)
     <Button label={labels.default} />
   ))
   .add('error', () => (
-    <Button type="error" label={labels.error} />
+    <Button category="error" label={labels.error} />
   ))
   .add('with click action', () => (
     <Button onClick={action('clicked')} label={labels.click} />

@@ -3,7 +3,7 @@ import Content from 'components/Content';
 
 const HomePage = () => (
   <div>
-    <Content title="Home" sampleLenght="5" />
+    <Content title="Home" sampleLength={5} />
   </div>
 );
 

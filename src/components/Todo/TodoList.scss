@@ -1,0 +1,22 @@
+@import 'assets/styles/modules/all';
+
+.todo-list {
+	max-width: 300px;
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		text-transform: uppercase;
+		background-color: #CECECE;
+		color: $black;
+		padding: 5px;
+		margin-bottom: 3px;
+
+		&:hover {
+			background-color: #CCCCCC;
+			font-weight: bold;
+		}
+	}
+}

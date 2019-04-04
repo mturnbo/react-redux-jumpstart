@@ -29,9 +29,9 @@ const ButtonsPage = props => {
     <div>
       <Content title="Buttons" />
       <Button label="Default" onClick={() => console.log('default')} />
-      <Button type="success" label="Success" onClick={() => console.log('success')} />
-      <Button type="error" label="Error" onClick={() => console.log('error')} />
-      <Button type="warning" label="Warning" onClick={() => console.log('warning')} />
+      <Button category="success" label="Success" onClick={() => console.log('success')} />
+      <Button category="error" label="Error" onClick={() => console.log('error')} />
+      <Button category="warning" label="Warning" onClick={() => console.log('warning')} />
       <Button label="Notification" onClick={displayRandomNotification} />
       <Button label="Modal" onClick={displayModal} />
       <br />
