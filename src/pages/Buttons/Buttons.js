@@ -29,11 +29,11 @@ const ButtonsPage = props => {
     <div>
       <Content title="Buttons" />
       <Button label="Default" onClick={() => console.log('default')} />
-      <Button category="success" label="Success" onClick={() => console.log('success')} />
-      <Button category="error" label="Error" onClick={() => console.log('error')} />
-      <Button category="warning" label="Warning" onClick={() => console.log('warning')} />
-      <Button label="Notification" onClick={displayRandomNotification} />
-      <Button label="Modal" onClick={displayModal} />
+      <Button category="primary" label="Primary" onClick={() => console.log('primary')} />
+      <Button category="secondary" label="Secondary" onClick={() => console.log('secondary')} />
+      <Button category="danger" label="Danger" onClick={() => console.log('danger')} />
+      <Button category="primary" label="Notification" onClick={displayRandomNotification} />
+      <Button category="secondary" label="Modal" onClick={displayModal} />
       <br />
       <Counter />
     </div>

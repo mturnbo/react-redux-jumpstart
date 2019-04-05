@@ -1,9 +1,3 @@
-@import 'modules/all';
-@import 'partials/base';
-
-body {
-	background-color: #F5F5DC;
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	color: $base-font-color;
-}
+@import "vendor/uikit/scss/variables-theme.scss";
+@import "vendor/uikit/scss/mixins-theme.scss";
+@import "vendor/uikit/scss/uikit-theme.scss";

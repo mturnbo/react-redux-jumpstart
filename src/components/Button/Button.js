@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Button.scss';
 
 const Button = ({ type, category, label, onClick }) => (
   /* eslint-disable-next-line react/button-has-type */
-  <button type={type} className={'btn ' + category} onClick={onClick}>{label}</button>
+  <button type={type} className={'uk-button uk-button-' + category} onClick={onClick}>{label}</button>
 );
 
 Button.propTypes = {

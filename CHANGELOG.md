@@ -1,6 +1,11 @@
 # React Redux Jumpstart
 
 #### v.1.0.0
+* *Feature*: Added UIKit
+* *Update*: Updated Button component
+* *Feature*: Added NavBar component
+
+#### v.1.0.0
 * *Feature*: Added Todo List
 
 #### v.0.8.8
