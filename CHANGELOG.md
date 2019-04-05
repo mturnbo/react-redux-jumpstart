@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.0.0
+* *Feature*: Added Todo List
+
 #### v.0.8.8
 * *Update*: Reorganized stylesheet file structure
 

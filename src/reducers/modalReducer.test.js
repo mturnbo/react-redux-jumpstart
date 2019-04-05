@@ -2,10 +2,13 @@ import { SHOW_MODAL } from '../constants/modalConstants';
 import reducer from './modalReducer';
 import initialState from '../state/modalState';
 
+const mockCallBack = jest.fn();
+
 const testModal = {
   title: 'modal title',
   message: 'modal message',
-  display: true
+  display: true,
+  onDismissClick: mockCallBack
 };
 
 describe('modal reducer', () => {

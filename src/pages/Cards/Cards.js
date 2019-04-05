@@ -6,7 +6,7 @@ import './Cards.scss';
 
 const CardsPage = () => (
   <div>
-    <Content title="Cards" sampleLength="3" />
+    <Content title="Cards" sampleLength={3} />
     <div className="card-container">
       {profiles.map((profile) => <Card key={profile.id} {...profile} />)}
     </div>
