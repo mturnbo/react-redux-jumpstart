@@ -54,9 +54,7 @@ export function slideUp(e, containerClass, intervalTimeout = 10) {
   });
 }
 
-export function getContent(length) {
-  return content.text.slice(0, length).join(' ');
-}
+export const getContent = length => content.text.slice(0, length).join(' ');
 
 export function getNotification(type) {
   const types = ['primary', 'link', 'info', 'success', 'warning', 'danger'];
@@ -70,6 +68,9 @@ export function getNotification(type) {
 
   return notification;
 }
+
+export const generateID = () => Date.now().toString(36) + '-' + (Math.random() + 1).toString(36).substring(7);
+
 
 // export function generateNumArray(n) {
 //   return Array.from({ length: n }, (v, k) => k + 1);

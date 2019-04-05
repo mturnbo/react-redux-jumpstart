@@ -5,7 +5,8 @@ import {
   AboutPage,
   ContactPage,
   ButtonsPage,
-  CardsPage
+  CardsPage,
+  TodoPage
 } from 'pages';
 
 class AppRoutes extends React.Component {
@@ -17,6 +18,7 @@ class AppRoutes extends React.Component {
         <Route name="buttons" path="/buttons" component={ButtonsPage} />
         <Route name="cards" path="/cards" component={CardsPage} />
         <Route name="contact" path="/contact" component={ContactPage} />
+        <Route name="todos" path="/todos" component={TodoPage} />
         <Redirect from="/" to="home" />
       </Switch>
     );

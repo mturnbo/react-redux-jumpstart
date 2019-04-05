@@ -7,7 +7,7 @@ const testModal = {
 };
 
 describe('modal actions', () => {
-  it('should create an action to add a notification', () => {
+  it('should create an action to add a modal', () => {
     const expectedAction = {
       type: SHOW_MODAL,
       payload: {

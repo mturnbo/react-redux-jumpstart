@@ -1,0 +1,12 @@
+@import 'assets/styles/modules/all';
+
+.todo-list {
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $darkgrey;
+	padding: 10px;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
+}

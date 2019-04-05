@@ -1,5 +1,17 @@
 # React Redux Jumpstart
 
+#### v.1.0.0
+* *Feature*: Added Todo List
+
+#### v.0.8.8
+* *Update*: Reorganized stylesheet file structure
+
+#### v.0.8.7
+* *Configuration*: Updated Jest config
+* *Configuration*: Updated Docker image name
+* *Configuration*: Updated Webpack prod config
+* *Configuration*: Added paths file
+
 #### v.0.8.5
 * *Feature*: Added Content Generator
 

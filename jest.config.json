@@ -36,7 +36,8 @@
 		"^components(.*)$": "<rootDir>/src/components$1",
 		"^pages(.*)$": "<rootDir>/src/pages$1",
 		"^data(.*)$": "<rootDir>/src/data$1",
-		"^actions(.*)$": "<rootDir>/src/actions$1"
+		"^actions(.*)$": "<rootDir>/src/actions$1",
+		"^assets(.*)$": "<roorDir>/assets$1"
 	},
 	"unmockedModulePathPatterns": [
 		"react"
@@ -44,7 +45,9 @@
 	"testMatch": [
 		"**/?(*.)(spec|test).js?(x)"
 	],
-	"setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+	"setupFilesAfterEnv": [
+		"./node_modules/jest-enzyme/lib/index.js"
+	],
 	"setupFiles": [
 		"<rootDir>/test-utils/enzyme.setup.js"
 	],

@@ -1,0 +1,19 @@
+// FONT WEIGHTS
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// BASE FONT
+$base-font-family: Arial, Helvetica, Verdana, sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 13px;
+$base-line-height: 1.4;
+$base-font-color: #666666;
+
+// FIXED FONT
+$fixed-font-family: monospace;
+$fixed-font-size: 90%;
+$fixed-line-height: $base-line-height;
+
+// HEADINGS
+$header-font-weight: $bold;

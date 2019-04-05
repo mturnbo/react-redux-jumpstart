@@ -6,7 +6,7 @@ const mockCallBack = jest.fn();
 
 describe('Dismiss', () => {
   test('should match snapshot', () => {
-    const wrapper = shallow(<Dismiss onClick={mockCallBack} />);
+    const wrapper = shallow(<Dismiss dismissCallback={mockCallBack} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

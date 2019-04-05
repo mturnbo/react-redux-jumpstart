@@ -1,4 +1,4 @@
-@import 'assets/styles/variables.scss';
+@import 'assets/styles/modules/all';
 
 .modal-container {
 	.hidden {
@@ -23,7 +23,7 @@
 		transform: translate(-50%, -50%);
 		max-height: 90%;
 		overflow: auto;
-		background: $color-white;
+		background: $white;
 		box-sizing: border-box;
 		box-shadow: $shadow;
 		border-radius: $border-radius;
@@ -34,13 +34,13 @@
 		.modal-title {
 			font-size: 16px;
 			font-weight: bold;
-			color: $color-black;
+			color: $black;
 			margin-bottom: 10px;
 		}
 
 		.modal-content {
 			font-size: 14px;
-			color: $color-darkgrey;
+			color: $darkgrey;
 		}
 
 		> .dismiss {
