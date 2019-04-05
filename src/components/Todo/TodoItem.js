@@ -2,13 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Dismiss from 'components/Dismiss';
 import './TodoItem.scss';
+import classNames from 'classnames';
 
-const TodoItem = ({ text, complete, toggle, remove }) => (
-  <div role="listitem" className={complete ? 'todo-item complete' : 'todo-item'} onClick={toggle}>
-    {text}
-    <Dismiss dismissCallback={remove} />
-  </div>
-);
+const TodoItem = ({ text, complete, toggle, remove }) => {
+  const todoClass = classNames({
+    'todo-item': true,
+    complete
+  });
+
+  return (
+    <div role="listitem" className={todoClass} onClick={toggle}>
+      {text}
+      <Dismiss dismissCallback={remove} />
+    </div>
+  );
+};
 
 TodoItem.propTypes = {
   text: PropTypes.string.isRequired,

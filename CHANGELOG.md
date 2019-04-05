@@ -1,7 +1,11 @@
 # React Redux Jumpstart
 
-#### v.1.0.0
-* *Feature*: Added UIKit
+#### v.1.2.0
+* *Feature*: Added Container component
+* *Dependency*: Added [classnames](https://www.npmjs.com/package/classnames) utility 
+
+#### v.1.1.0
+* *Feature*: Added [UIKit](https://getuikit.com)
 * *Update*: Updated Button component
 * *Feature*: Added NavBar component
 

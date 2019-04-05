@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from 'components/Container';
 import Content from 'components/Content';
 
 const AboutPage = () => (
-  <div>
+  <Container size="small">
     <Content title="About Us" />
-  </div>
+  </Container>
 );
 
 export default AboutPage;
