@@ -5,11 +5,7 @@ import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
 import content from 'data/content.json';
-import {
-  Button,
-  Content,
-  Counter
-} from 'components/';
+import Button from 'components/Button';
 import { getRandomSample, getNotification } from '../../utils';
 
 const ButtonsPage = props => {
@@ -27,15 +23,27 @@ const ButtonsPage = props => {
   /* eslint-disable no-console */
   return (
     <div>
-      <Content title="Buttons" />
-      <Button label="Default" onClick={() => console.log('default')} />
-      <Button category="primary" label="Primary" onClick={() => console.log('primary')} />
-      <Button category="secondary" label="Secondary" onClick={() => console.log('secondary')} />
+      <div className="uk-inline">
+        <Button label="Default" onClick={() => console.log('default')} />
+        <div data-uk-drop="mode: click">
+          <div className="uk-card uk-card-body uk-card-default">You clicked the default button.</div>
+        </div>
+      </div>
+      <div className="uk-inline">
+        <Button category="primary" label="Primary" onClick={() => console.log('primary')} />
+        <div data-uk-drop="mode: click">
+          <div className="uk-card uk-card-body uk-card-default">You clicked the primary button.</div>
+        </div>
+      </div>
+      <div className="uk-inline">
+        <Button category="secondary" label="Secondary" onClick={() => console.log('secondary')} />
+        <div data-uk-drop="mode: hover">
+          <div className="uk-card uk-card-body uk-card-default">You hovered over the secondary button.</div>
+        </div>
+      </div>
       <Button category="danger" label="Danger" onClick={() => console.log('danger')} />
       <Button category="primary" label="Notification" onClick={displayRandomNotification} />
       <Button category="secondary" label="Modal" onClick={displayModal} />
-      <br />
-      <Counter />
     </div>
   );
   /* eslint-enable no-console */

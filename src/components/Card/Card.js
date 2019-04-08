@@ -1,30 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Card.scss';
+import classNames from 'classnames';
 
-const Card = ({
-  fullname, title, bio, avatar
-}) => (
-  <div className="card">
-    <div className="card-avatar">
-      <img src={`/assets/images/avatars/${avatar}.png`} alt={fullname} />
+const Card = ({ type, size, title, content, footer }) => {
+  const cardClass = classNames({
+    'uk-card': true,
+    'uk-card-body': true,
+    'uk-card-small': size === 'small',
+    'uk-card-large': size === 'large',
+    'uk-card-default': type === 'default',
+    'uk-card-primary': type === 'primary',
+    'uk-card-secondary': type === 'secondary'
+  });
+
+  return (
+    <div className={cardClass}>
+      <div className="uk-card-header">
+        <h3 className="uk-card-title">{title}</h3>
+      </div>
+      <p>{content}</p>
+      {footer && <div className="uk-card-footer">{footer}</div>}
     </div>
-    <div className="card-fullname">{fullname}</div>
-    <div className="card-title">{title}</div>
-    <div className="card-bio">{bio}</div>
-  </div>
-);
+  );
+};
 
 Card.propTypes = {
-  fullname: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  size: PropTypes.string,
   title: PropTypes.string.isRequired,
-  bio: PropTypes.string,
-  avatar: PropTypes.string
+  content: PropTypes.string.isRequired,
+  footer: PropTypes.string
 };
 
 Card.defaultProps = {
-  avatar: 'user-generic',
-  bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bacon ipsum dolor amet porchetta bacon salami chuck chicken.'
+  type: 'default',
+  size: 'small',
+  footer: null
 };
 
 export default Card;

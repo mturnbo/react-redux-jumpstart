@@ -90,7 +90,7 @@
     "dev": "webpack-dev-server --mode development --config webpack.dev.js",
     "build": "webpack --mode production --config webpack.prod.js",
     "lint": "eslint --fix --cache --ignore-path .gitignore --ext .jsx,.js .",
-    "test": "jest --config=jest.config.json",
+    "test": "jest --config=jest.config.json --coverage",
     "test:update": "jest --config=jest.config.json --update-snapshot",
     "test:watch": "jest --config=jest.config.json --coverage --watchAll",
     "dockerbuild": "webpack --mode production --config webpack.prod.js && docker build -t react-redux-jumpstart:latest .",

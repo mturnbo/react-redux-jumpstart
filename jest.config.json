@@ -3,12 +3,17 @@
 	"verbose": true,
 	"collectCoverage": false,
 	"collectCoverageFrom": [
-		"**/*.{js,jsx}",
-		"!**/node_modules/**"
+		"src/*.{js,jsx}",
+		"!**/node_modules/**",
+		"!src/index.js",
+		"!src/store.js"
 	],
 	"rootDir": ".",
 	"coveragePathIgnorePatterns": [
-		"node_modules"
+		"<rootDir>/assets",
+		"<rootDir>/logs",
+		"<rootDir>/node_modules",
+		"<rootDir>/.tmp"
 	],
 	"coverageDirectory": "test-results",
 	"coverageReporters": [
