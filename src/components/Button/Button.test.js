@@ -10,13 +10,14 @@ const labels = {
   click: 'Click Me'
 };
 
+const mockCallBack = jest.fn();
+
 describe('Button', () => {
   test('should match snapshot', () => {
-    const wrapper = shallow(<Button />);
+    const wrapper = shallow(<Button label={labels.default} onClick={mockCallBack} />);
     expect(wrapper).toMatchSnapshot();
   });
   test('click event', () => {
-    const mockCallBack = jest.fn();
     const wrapper = shallow((<Button label={labels.click} onClick={mockCallBack} />));
     wrapper.find('button').simulate('click');
     expect(mockCallBack).toHaveBeenCalled();
