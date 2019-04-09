@@ -53,7 +53,7 @@ module.exports = {
       components: paths.COMPONENTS_PATH,
       pages: paths.PAGES_PATH,
       actions: paths.ACTIONS_PATH,
-      data: paths.DATA_PATH
+      test: paths.TEST_PATH
     },
     extensions: ['.js', '.json', '.jsx']
   }

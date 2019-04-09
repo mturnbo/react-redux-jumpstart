@@ -1,14 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import labels from 'test/fixtures/labels.json';
 import Button from './Button';
-
-const labels = {
-  default: 'Hello',
-  success: 'Succes',
-  error: 'Error',
-  warning: 'Warning',
-  click: 'Click Me'
-};
 
 const mockCallBack = jest.fn();
 

@@ -294,7 +294,7 @@ svg:not(:root) { overflow: hidden; }
 
 /*
  * Hide `alt` text for lazy load images
- * Selector for background while loading img[data-src*='.jpg'][src*='data:image'] { background: grey; }
+ * Selector for background while loading img[fixtures-src*='.jpg'][src*='fixtures:image'] { background: grey; }
  */
 
 img:not([src]) { visibility: hidden; }

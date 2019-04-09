@@ -12,5 +12,5 @@ module.exports = {
   COMPONENTS_PATH: path.join(APP_PATH, 'components'),
   PAGES_PATH: path.join(APP_PATH, 'pages'),
   ACTIONS_PATH: path.join(APP_PATH, 'actions'),
-  DATA_PATH: path.join(APP_PATH, 'data')
+  TEST_PATH: path.join(BASE_PATH, 'test')
 };

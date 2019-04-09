@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
-import content from 'data/content.json';
 import Button from 'components/Button';
-import { getRandomSample, getNotification } from '../../utils';
+import { getRandomContent, getNotification } from '../../utils';
 
 const ButtonsPage = props => {
   const displayRandomNotification = () => {
@@ -16,7 +15,7 @@ const ButtonsPage = props => {
   const displayModal = () => {
     props.actions.showModal({
       title: 'THIS IS A MODAL',
-      content: getRandomSample(content.text, 2).join(' ')
+      content: getRandomContent(2)
     });
   };
 
