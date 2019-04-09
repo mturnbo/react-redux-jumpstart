@@ -25,7 +25,7 @@ dist/
 
 ### Test ###
 __snapshots__/
-test-results/
+test/reports/
 
 ### Logs ###
 logs

@@ -4,19 +4,20 @@
 	"collectCoverage": false,
 	"collectCoverageFrom": [
 		"**/*.{js,jsx}",
+		",!src/**/*.(stor(y|ies)|fixtur(e|es)).js",
 		"!**/node_modules/**"
 	],
 	"rootDir": ".",
 	"coveragePathIgnorePatterns": [
 		"node_modules"
 	],
-	"coverageDirectory": "test-results",
+	"coverageDirectory": "test/reports",
 	"coverageReporters": [
 		"json-summary"
 	],
 	"transform": {
 		"^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-		"^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/test-utils/file-transform.js"
+		"^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/test/utils/file-transform.js"
 	},
 	"transformIgnorePatterns": [
 		"[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
@@ -49,7 +50,7 @@
 		"./node_modules/jest-enzyme/lib/index.js"
 	],
 	"setupFiles": [
-		"<rootDir>/test-utils/enzyme.setup.js"
+		"<rootDir>/test/utils/enzyme.setup.js"
 	],
 	"testURL": "http://localhost"
 }

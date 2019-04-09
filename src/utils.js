@@ -1,4 +1,4 @@
-import content from 'data/content';
+import content from '../test/fixtures/content';
 
 export function getRandomIntegers(size, max, collection = 'set') {
   const randomNums = new Set([]);
@@ -11,6 +11,10 @@ export function getRandomIntegers(size, max, collection = 'set') {
 export function getRandomSample(arr, n) {
   const randomKeys = getRandomIntegers(n, arr.length, 'array');
   return randomKeys.map(key => arr[key]);
+}
+
+export function getRandomContent(n) {
+  return getRandomSample(content.text, n).join(' ');
 }
 
 export function fadeOut(e, containerClass, intervalTimeout = 30) {

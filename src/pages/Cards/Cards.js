@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'components/Card';
 import Content from 'components/Content';
-import profiles from 'data/profiles.json';
+import profiles from '../../../test/fixtures/profiles.json';
 import './Cards.scss';
 
 const CardsPage = () => (
