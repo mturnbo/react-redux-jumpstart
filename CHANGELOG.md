@@ -1,5 +1,11 @@
 # React Redux Jumpstart
 
+#### v.1.4.0
+* *Feature*: Added config for menu
+
+#### v.1.3.0
+* *Feature*: Added NavBarDropdown component
+
 #### v.1.2.0
 * *Feature*: Added Container component
 * *Dependency*: Added [classnames](https://www.npmjs.com/package/classnames) utility 

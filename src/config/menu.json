@@ -1,0 +1,40 @@
+[
+	{
+		"link": "/",
+		"label": "Home"
+	},
+	{
+		"link": "/about",
+		"label": "About",
+		"subItems": [
+			{
+				"link": "/",
+				"label": "Who We Are"
+			},
+			{
+				"link": "/",
+				"label": "What We Do"
+			},
+			{
+				"link": "/",
+				"label": "Where We Are"
+			}
+		]
+	},
+	{
+		"link": "/buttons",
+		"label": "Buttons"
+	},
+	{
+		"link": "/cards",
+		"label": "Cards"
+	},
+	{
+		"link": "/todos",
+		"label": "Todos"
+	},
+	{
+		"link": "/contact",
+		"label": "Contact"
+	}
+]

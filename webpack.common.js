@@ -4,10 +4,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const paths = require('./paths');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: `${paths.APP_PATH}/index.html`,
+  template: `${paths.APP}/index.html`,
   filename: 'index.html',
   inject: 'body',
-  favicon: `${paths.ASSETS_PATH}/images/favicon.ico`
+  favicon: `${paths.ASSETS}/images/favicon.ico`
 });
 
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
@@ -20,7 +20,7 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
 
 module.exports = {
   entry: {
-    main: `${paths.APP_PATH}/index.js`
+    main: `${paths.APP}/index.js`
   },
   mode: 'development',
   plugins: [
@@ -32,7 +32,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: paths.MODULES_PATH,
+        exclude: paths.MODULES,
         use: {
           loader: 'babel-loader'
         }
@@ -49,11 +49,12 @@ module.exports = {
   },
   resolve: {
     alias: {
-      assets: paths.ASSETS_PATH,
-      components: paths.COMPONENTS_PATH,
-      pages: paths.PAGES_PATH,
-      actions: paths.ACTIONS_PATH,
-      test: paths.TEST_PATH
+      config: paths.CONFIG,
+      assets: paths.ASSETS,
+      components: paths.COMPONENTS,
+      pages: paths.PAGES,
+      actions: paths.ACTIONS,
+      test: paths.TEST
     },
     extensions: ['.js', '.json', '.jsx']
   }

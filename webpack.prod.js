@@ -4,13 +4,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const paths = require('./paths');
 const common = require('./webpack.common');
 
-const BUILD_PATH = path.join(paths.BASE_PATH, 'dist');
+const BUILD = path.join(paths.BASE, 'dist');
 
 const CleanWebpackPluginConfig = new CleanWebpackPlugin(['dist']);
 
 module.exports = merge(common, {
   output: {
-    path: BUILD_PATH,
+    path: BUILD,
     filename: 'bundle.js'
   },
   plugins: [

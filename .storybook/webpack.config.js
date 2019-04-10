@@ -1,8 +1,8 @@
 const path = require('path');
 
-const BASE_PATH = path.resolve(__dirname, '../');
-const APP_PATH = path.join(BASE_PATH, 'src');
-const ASSETS_PATH = path.join(BASE_PATH, 'assets');
+const BASE = path.resolve(__dirname, '../');
+const APP = path.join(BASE, 'src');
+const ASSETS = path.join(BASE, 'assets');
 
 module.exports = {
   module: {
@@ -19,9 +19,9 @@ module.exports = {
   },
 	resolve: {
 		alias: {
-			assets: ASSETS_PATH,
-			components: path.join(APP_PATH, 'components'),
-			pages:  path.join(APP_PATH, 'pages')
+			assets: ASSETS,
+			components: path.join(APP, 'components'),
+			pages:  path.join(APP, 'pages')
 		},
 		extensions: ['.js', '.json', '.jsx']
 	}
