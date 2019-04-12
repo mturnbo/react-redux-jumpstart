@@ -9,7 +9,7 @@ describe('Content', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should contain title element', () => {
-    expect(wrapper.containsMatchingElement(<div className="title">TEST</div>)).toBe(true);
+    expect(wrapper.containsMatchingElement(<h1 className="uk-heading-divider">TEST</h1>)).toBe(true);
   });
   it('should contain text element', () => {
     expect(wrapper.containsMatchingElement(<div className="text">TEST</div>)).toBe(true);

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addTodoItem } from 'actions/todoActions';
-import Button from 'components/Button';
 import './AddTodo.scss';
 
 const AddTodo = ({ add }) => {
@@ -20,8 +19,8 @@ const AddTodo = ({ add }) => {
           input.value = '';
         }}
       >
-        <input ref={node => (input = node)} />
-        <Button type="submit" label="Add Todo" onClick={null} />
+        <input className="uk-input" ref={node => (input = node)} placeholder="Add Todo" />
+        <button className="uk-button uk-button-primary uk-button-small uk-align-right" type="submit">Add Todo</button>
       </form>
     </div>
   );

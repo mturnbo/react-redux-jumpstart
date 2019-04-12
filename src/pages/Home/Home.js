@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from 'components/Container';
 import Content from 'components/Content';
 
 const HomePage = () => (
-  <div>
+  <Container size="small">
     <Content title="Home" sampleLength={5} />
-  </div>
+  </Container>
 );
 
 export default HomePage;

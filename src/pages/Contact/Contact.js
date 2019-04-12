@@ -1,10 +1,11 @@
 import React from 'react';
+import Container from 'components/Container';
 import Content from 'components/Content';
 
 const ContactPage = () => (
-  <div>
+  <Container size="small">
     <Content title="Contact Us" />
-  </div>
+  </Container>
 );
 
 export default ContactPage;

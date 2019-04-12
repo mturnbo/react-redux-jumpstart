@@ -5,7 +5,7 @@ import './Content.scss';
 
 const Content = ({ title, text, sampleLength }) => (
   <div className="content">
-    {title && <div className="title">{title}</div>}
+    {title && <h1 className="uk-heading-divider">{title}</h1>}
     <div className="text">{text || getContent(sampleLength)}</div>
   </div>
 );
