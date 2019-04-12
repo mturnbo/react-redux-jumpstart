@@ -1,5 +1,9 @@
 # React Redux Jumpstart
 
+#### v.1.5.0
+* *Configuration*: Added minification for build configuration
+* *Configuration*: Updated Jest config
+
 #### v.1.4.0
 * *Feature*: Added config for menu
 

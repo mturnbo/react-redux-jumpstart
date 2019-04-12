@@ -19,11 +19,12 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
 ]);
 
 module.exports = {
+  mode: 'development',
   entry: {
     main: `${paths.APP}/index.js`
   },
-  mode: 'development',
-  plugins: [
+	devtool: 'source-map',
+	plugins: [
     HtmlWebpackPluginConfig,
     MiniCssExtractPluginConfig,
     CopyWebpackPluginConfig
