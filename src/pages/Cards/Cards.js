@@ -1,8 +1,10 @@
 import React from 'react';
 import {
   Container,
-  Card
+  Card,
+  ProfileCard
 } from 'components';
+import profiles from 'test/fixtures/profiles.json';
 
 const CardsPage = () => (
   <Container size="small">
@@ -11,12 +13,7 @@ const CardsPage = () => (
       title="Card 1"
       content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     />
-    <Card
-      size="small"
-      title="Card 2"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      footer="MORE"
-    />
+    <ProfileCard {...profiles[0]} />
   </Container>
 );
 

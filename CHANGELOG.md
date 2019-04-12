@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.6.0
+* *Feature*: Added ProfileCard component
+
 #### v.1.5.0
 * *Configuration*: Added minification for build configuration
 * *Configuration*: Updated Jest config
