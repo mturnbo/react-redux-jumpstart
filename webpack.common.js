@@ -23,8 +23,8 @@ module.exports = {
   entry: {
     main: `${paths.APP}/index.js`
   },
-	devtool: 'source-map',
-	plugins: [
+  devtool: 'source-map',
+  plugins: [
     HtmlWebpackPluginConfig,
     MiniCssExtractPluginConfig,
     CopyWebpackPluginConfig

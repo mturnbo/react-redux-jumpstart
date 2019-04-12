@@ -1,11 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import profiles from 'test/fixtures/profiles.json';
 import Card from './Card';
 
 describe('Card', () => {
   test('should match snapshot', () => {
-    const wrapper = shallow(<Card {...profiles[0]} />);
+    const wrapper = shallow(<Card
+      title="Test Card"
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    />);
     expect(wrapper).toMatchSnapshot();
   });
 });
