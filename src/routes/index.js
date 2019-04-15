@@ -3,9 +3,8 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import {
   HomePage,
   AboutPage,
-  ContactPage,
   ButtonsPage,
-  CardsPage,
+  ComponentsPage,
   TodoPage
 } from 'pages';
 
@@ -16,9 +15,8 @@ class AppRoutes extends React.Component {
         <Route name="home" exact path="/" component={HomePage} />
         <Route name="about" path="/about" component={AboutPage} />
         <Route name="buttons" path="/buttons" component={ButtonsPage} />
-        <Route name="cards" path="/cards" component={CardsPage} />
-        <Route name="contact" path="/contact" component={ContactPage} />
         <Route name="todos" path="/todos" component={TodoPage} />
+        <Route name="components" path="/components" component={ComponentsPage} />
         <Redirect from="/" to="home" />
       </Switch>
     );

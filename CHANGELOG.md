@@ -1,5 +1,11 @@
 # React Redux Jumpstart
 
+#### v.1.7.0
+* *Feature*: Added List component
+* *Feature*: Added ProgessBar component
+* *Feature*: Added Components page
+* *Update*: Removed sample content utility from Content component
+
 #### v.1.6.0
 * *Feature*: Added ProfileCard component
 

@@ -26,15 +26,11 @@
 		"label": "Buttons"
 	},
 	{
-		"link": "/cards",
-		"label": "Cards"
-	},
-	{
 		"link": "/todos",
 		"label": "Todos"
 	},
 	{
-		"link": "/contact",
-		"label": "Contact"
+		"link": "/components",
+		"label": "Components"
 	}
 ]
