@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.8.0
+* *Feature*: Added Drop component
+
 #### v.1.7.0
 * *Feature*: Added List component
 * *Feature*: Added ProgessBar component

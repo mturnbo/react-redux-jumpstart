@@ -17,6 +17,7 @@
 	],
 	"coverageDirectory": "test/reports",
 	"coverageReporters": [
+		"html",
 		"json-summary"
 	],
 	"transform": {
