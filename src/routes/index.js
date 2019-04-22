@@ -5,7 +5,9 @@ import {
   AboutPage,
   ButtonsPage,
   ComponentsPage,
-  TodoPage
+  TodoPage,
+  BigListPage,
+  BigTablePage
 } from 'pages';
 
 class AppRoutes extends React.Component {
@@ -17,6 +19,8 @@ class AppRoutes extends React.Component {
         <Route name="buttons" path="/buttons" component={ButtonsPage} />
         <Route name="todos" path="/todos" component={TodoPage} />
         <Route name="components" path="/components" component={ComponentsPage} />
+        <Route name="biglist" path="/biglist" component={BigListPage} />
+        <Route name="bigtable" path="/bigtable" component={BigTablePage} />
         <Redirect from="/" to="home" />
       </Switch>
     );

@@ -1,12 +1,21 @@
 import React from 'react';
 import Container from 'components/Container';
 import Content from 'components/Content';
-import { getContent } from '../../utils';
+import { loremIpsum } from 'lorem-ipsum';
 
-const HomePage = () => (
-  <Container size="small">
-    <Content title="Home" text={getContent(2)} />
-  </Container>
-);
+const HomePage = () => {
+  const text = loremIpsum({
+    count: 1,
+    units: 'sentences',
+    sentenceLowerBound: 2,
+    sentenceUpperBound: 4
+  });
+
+  return (
+    <Container size="small">
+      <Content title="Home" text={text} />
+    </Container>
+  );
+};
 
 export default HomePage;

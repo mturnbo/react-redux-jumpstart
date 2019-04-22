@@ -1,4 +1,6 @@
-import content from 'test/fixtures/content';
+import { sample as _sample } from 'lodash';
+import names from 'test/fixtures/names.json';
+import { loremIpsum } from 'lorem-ipsum';
 
 export function getRandomIntegers(size, max, collection = 'set') {
   const randomNums = new Set([]);
@@ -13,8 +15,28 @@ export function getRandomSample(arr, n) {
   return randomKeys.map(key => arr[key]);
 }
 
-export function getRandomContent(n) {
-  return getRandomSample(content.text, n).join(' ');
+export function randomDate(start, end) {
+  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
+export function generatePeopleList(c) {
+  const dateRange = {
+    start: new Date(1980, 0, 1),
+    end: new Date(2001, 11, 30)
+  };
+
+  return Array(c).fill().map((val, idx) => ({
+    id: idx,
+    name: _sample(names) + val,
+    birthDate: randomDate(dateRange.start, dateRange.end).toISOString().substring(0, 10),
+    image: '/assets/images/avatars/user-generic.png',
+    bio: loremIpsum({
+      count: 4,
+      units: 'sentences',
+      sentenceLowerBound: 4,
+      sentenceUpperBound: 8
+    })
+  }));
 }
 
 export function fadeOut(e, containerClass, intervalTimeout = 30) {
@@ -58,16 +80,20 @@ export function slideUp(e, containerClass, intervalTimeout = 10) {
   });
 }
 
-export const getContent = length => content.text.slice(0, length).join(' ');
-
 export function getNotification(type) {
   const types = ['primary', 'link', 'info', 'success', 'warning', 'danger'];
   const notificationType = type || types[Math.floor(Math.random() * types.length)];
   const d = new Date().toString();
+  const msg = loremIpsum({
+    count: 1,
+    units: 'sentences',
+    sentenceLowerBound: 4,
+    sentenceUpperBound: 8
+  });
   const notification = {
     type: notificationType,
     title: notificationType.toUpperCase(),
-    message: `${d} ${getRandomSample(content.text, 2).join(' ')}`
+    message: `${d} | ${msg}`
   };
 
   return notification;

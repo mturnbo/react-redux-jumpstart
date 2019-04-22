@@ -1,11 +1,15 @@
 # React Redux Jumpstart
 
+#### v.1.9.0
+* *Feature*: Added List page using react-virtualized
+* *Feature*: Added Table page using react-virtualized
+
 #### v.1.8.0
 * *Feature*: Added Drop component
 
 #### v.1.7.0
 * *Feature*: Added List component
-* *Feature*: Added ProgessBar component
+* *Feature*: Added ProgessBar component 
 * *Feature*: Added Components page
 * *Update*: Removed sample content utility from Content component
 

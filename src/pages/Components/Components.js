@@ -7,7 +7,8 @@ import {
   List
 } from 'components';
 import profiles from 'test/fixtures/profiles.json';
-import { listItems } from 'test/fixtures/content';
+
+const listItems = Array(5).fill().map((val, idx) => `List Item ${idx + 1}`);
 
 const ComponentsPage = () => (
   <Container size="large">

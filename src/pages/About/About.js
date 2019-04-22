@@ -3,12 +3,21 @@ import {
   Container,
   Content
 } from 'components';
-import { getContent } from '../../utils';
+import loremIpsum from 'lorem-ipsum';
 
-const AboutPage = () => (
-  <Container size="small">
-    <Content title="About Us" text={getContent(2)} />
-  </Container>
-);
+const AboutPage = () => {
+  const text = loremIpsum({
+    count: 1,
+    units: 'sentences',
+    sentenceLowerBound: 2,
+    sentenceUpperBound: 4
+  });
+
+  return (
+    <Container size="small">
+      <Content title="About Us" text={text} />
+    </Container>
+  );
+};
 
 export default AboutPage;
