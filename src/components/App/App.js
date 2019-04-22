@@ -13,7 +13,6 @@ import './App.scss';
 const App = () => (
   <Router>
     <div className="app-container">
-      <h1>React Redux Jumpstart</h1>
       <NavBar menu={menu} />
       <div className="app-content">
         <AppRoutes />

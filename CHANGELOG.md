@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.10.0
+* *Feature*: Responsive navigation
+
 #### v.1.9.0
 * *Feature*: Added List page using react-virtualized
 * *Feature*: Added Table page using react-virtualized

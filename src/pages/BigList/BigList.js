@@ -5,7 +5,6 @@ import './BigList.scss';
 
 const BigList = () => {
   const bigList = generatePeopleList(1000);
-
   const listHeight = 400;
   const rowHeight = 75;
   const rowWidth = 550;

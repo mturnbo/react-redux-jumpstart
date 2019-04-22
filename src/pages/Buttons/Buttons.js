@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { loremIpsum } from 'lorem-ipsum';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
 import Button from 'components/Button';
 import Drop from 'components/Drop';
-import { getRandomContent, getNotification } from '../../utils';
+import { getNotification } from '../../utils';
 
 const ButtonsPage = props => {
   const displayRandomNotification = () => {
@@ -16,7 +17,12 @@ const ButtonsPage = props => {
   const displayModal = () => {
     props.actions.showModal({
       title: 'THIS IS A MODAL',
-      content: getRandomContent(2)
+      content: loremIpsum({
+        count: 4,
+        units: 'sentences',
+        sentenceLowerBound: 4,
+        sentenceUpperBound: 8
+      })
     });
   };
 
