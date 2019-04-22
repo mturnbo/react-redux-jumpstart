@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.11.0
+* *Feature*: Parallax Component
+
 #### v.1.10.0
 * *Feature*: Responsive navigation
 

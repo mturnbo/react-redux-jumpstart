@@ -4,7 +4,8 @@ import {
   Card,
   ProfileCard,
   ProgressBar,
-  List
+  List,
+  Parallax
 } from 'components';
 import profiles from 'test/fixtures/profiles.json';
 
@@ -28,6 +29,11 @@ const ComponentsPage = () => (
     <hr />
     <h2>Progress Bar</h2>
     <ProgressBar value={25} max={100} />
+    <hr />
+    <h2>Parallax</h2>
+    <Parallax image="https://picsum.photos/960/300/?random">
+      <h2>This is a parallax</h2>
+    </Parallax>
     <hr />
     <h2>List</h2>
     <div className="uk-child-width-1-4@m uk-grid" data-uk-grid>

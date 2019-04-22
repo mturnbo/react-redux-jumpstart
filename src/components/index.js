@@ -9,3 +9,4 @@ export { default as Content } from './Content';
 export { default as Counter } from './Counter';
 export { default as List } from './List';
 export { default as ProgressBar } from './ProgressBar';
+export { default as Parallax } from './Parallax';
