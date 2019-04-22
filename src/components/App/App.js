@@ -12,9 +12,9 @@ import './App.scss';
 
 const App = () => (
   <Router>
-    <div className="app-container">
+    <div className="jumpstart-app-container">
       <NavBar menu={menu} />
-      <div className="app-content">
+      <div className="jumpstart-app-content">
         <AppRoutes />
       </div>
       <ModalContainer />

@@ -7,7 +7,7 @@ import AddTodo from './AddTodo';
 import './TodoList.scss';
 
 const TodoList = ({ items, toggle, remove }) => (
-  <div className="todo-list">
+  <div className="jumpstart-todo-list">
     <h2>Todo List</h2>
     <hr />
     <AddTodo />

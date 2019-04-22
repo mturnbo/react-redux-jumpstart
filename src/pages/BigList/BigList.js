@@ -14,7 +14,7 @@ const BigList = () => {
       <div className="image">
         <img src={bigList[index].image} alt="" />
       </div>
-      <div className="content">
+      <div className="jumpstart-content">
         <div className="name">{bigList[index].name}</div>
         <div className="birth-date">{bigList[index].birthDate}</div>
         <div className="bio">{bigList[index].bio}</div>
@@ -23,7 +23,7 @@ const BigList = () => {
   );
 
   return (
-    <div className="big-list">
+    <div className="jumpstart-big-list">
       <List
         width={rowWidth}
         height={listHeight}

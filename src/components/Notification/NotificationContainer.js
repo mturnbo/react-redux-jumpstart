@@ -6,7 +6,7 @@ import Notification from './Notification';
 import './NotificationContainer.scss';
 
 const NotificationContainer = ({ notifications, remove }) => (
-  <div className="notification-container">
+  <div className="jumpstart-notification-container">
     {notifications.map(notification => (
       <Notification
         {...notification}

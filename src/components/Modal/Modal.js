@@ -7,11 +7,11 @@ const Modal = ({
   title, content, onDismissClick
 }) => (
   <div className="modal">
-    <div className="modal-overlay" />
-    <div className="modal-popup">
+    <div className="jumpstart-modal-overlay" />
+    <div className="jumpstart-modal-popup">
       <Dismiss dismissCallback={onDismissClick} />
-      <div className="modal-title">{title}</div>
-      <div className="modal-content">
+      <div className="jumpstart-modal-title">{title}</div>
+      <div className="jumpstart-modal-content">
         {content}
       </div>
     </div>

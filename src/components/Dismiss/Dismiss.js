@@ -18,7 +18,7 @@ const Dismiss = ({ dismissCallback, effect }) => {
   };
 
   return (
-    <button type="button" className="dismiss" aria-label="dismiss" onClick={dismiss} />
+    <button type="button" className="jumpstart-dismiss" aria-label="dismiss" onClick={dismiss} />
   );
 };
 

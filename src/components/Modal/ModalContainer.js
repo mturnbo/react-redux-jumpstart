@@ -18,7 +18,7 @@ class ModalContainer extends React.Component {
   render() {
     const { display, title, content } = this.props;
     return (
-      <div className="modal-container">
+      <div className="jumpstart-modal-container">
         {display && <Modal title={title} content={content} onDismissClick={this.closeModal} />}
       </div>
     );

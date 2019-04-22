@@ -8,7 +8,7 @@ const AddTodo = ({ add }) => {
   let input;
 
   return (
-    <div className="add-todo">
+    <div className="jumpstart-add-todo">
       <form
         onSubmit={e => {
           e.preventDefault();

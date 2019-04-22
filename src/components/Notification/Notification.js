@@ -6,7 +6,7 @@ import './Notification.scss';
 const Notification = ({
   type, title, message, onDismissClick
 }) => (
-  <div className="notification-item dismiss-effect">
+  <div className="jumpstart-notification-item dismiss-effect">
     <div className={`notification-body ${type}`}>
       <Dismiss dismissCallback={onDismissClick} />
       <h2 className="title is-4">{title}</h2>

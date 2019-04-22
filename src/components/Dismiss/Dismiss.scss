@@ -1,4 +1,4 @@
-.dismiss {
+.jumpstart-dismiss {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	background-color: rgba(10, 10, 10, 0.2);
@@ -48,7 +48,7 @@
 	}
 }
 
-.dismiss::before, .dismiss::after {
+.jumpstart-dismiss::before, .jumpstart-dismiss::after {
 	background-color: white;
 	content: "";
 	display: block;
@@ -59,20 +59,20 @@
 	transform-origin: center center;
 }
 
-.dismiss::before {
+.jumpstart-dismiss::before {
 	height: 2px;
 	width: 50%;
 }
 
-.dismiss::after {
+.jumpstart-dismiss::after {
 	height: 50%;
 	width: 2px;
 }
 
-.dismiss:hover, .dismiss:focus {
+.jumpstart-dismiss:hover, .jumpstart-dismiss:focus {
 	background-color: rgba(10, 10, 10, 0.3);
 }
 
-.dismiss:active {
+.jumpstart-dismiss:active {
 	background-color: rgba(10, 10, 10, 0.4);
 }
