@@ -6,7 +6,7 @@ import classNames from 'classnames';
 
 const TodoItem = ({ text, complete, toggle, remove }) => {
   const todoClass = classNames({
-    'todo-item': true,
+    'jumpstart-todo-item': true,
     complete
   });
 

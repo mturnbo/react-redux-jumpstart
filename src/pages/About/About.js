@@ -3,7 +3,7 @@ import {
   Container,
   Content
 } from 'components';
-import loremIpsum from 'lorem-ipsum';
+import { loremIpsum } from 'lorem-ipsum';
 
 const AboutPage = () => {
   const text = loremIpsum({

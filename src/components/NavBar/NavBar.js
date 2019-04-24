@@ -8,7 +8,7 @@ import './NavBar.scss';
 
 const NavBar = ({ menu }) => {
   const renderMenuItems = menu.map(item => (
-    <li className="uk-text-large">
+    <li className="uk-text-large" key={`menu-${item.label.replace(' ', '').toLowerCase()}`}>
       <NavLink to={item.link}>{item.label}</NavLink>
       {item.subItems && <NavBarDropdown items={item.subItems} />}
     </li>

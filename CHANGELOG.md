@@ -1,6 +1,10 @@
 # React Redux Jumpstart
 
 #### v.1.11.0
+* *Update*: Reorganized Todo components
+* *Configuration*: Converted json configs to js modules
+
+#### v.1.11.0
 * *Feature*: Parallax Component
 
 #### v.1.10.0
