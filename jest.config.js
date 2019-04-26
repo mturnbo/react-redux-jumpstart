@@ -3,7 +3,7 @@ module.exports = {
   verbose: true,
   collectCoverage: false,
   collectCoverageFrom: [
-    'src/*.{js,jsx}',
+    'src/**.{js,jsx}',
     '!**/node_modules/**',
     '!src/index.js',
     '!src/store.js'
@@ -17,6 +17,7 @@ module.exports = {
   ],
   coverageDirectory: 'test/reports',
   coverageReporters: [
+    'text',
     'html',
     'json-summary'
   ],

@@ -8,12 +8,18 @@
 .env.production.local
 
 ### IDE ###
+# JETBRAINS
 .idea/
+# VSCODE
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+# ECLIPSE
+*.settings
+*.classpath
+/.project
 
 ### Dependencies ###
 node_modules
