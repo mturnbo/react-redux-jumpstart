@@ -1,6 +1,7 @@
 module.exports = {
   browser: true,
   verbose: true,
+  rootDir: '.',
   collectCoverage: false,
   collectCoverageFrom: [
     'src/**.{js,jsx}',
@@ -8,7 +9,6 @@ module.exports = {
     '!src/index.js',
     '!src/store.js'
   ],
-  rootDir: '.',
   coveragePathIgnorePatterns: [
     '<rootDir>/assets',
     '<rootDir>/logs',

@@ -6,3 +6,4 @@ export { default as TodoPage } from './Todos';
 export { default as ComponentsPage } from './Components';
 export { default as BigListPage } from './BigList';
 export { default as BigTablePage } from './BigTable';
+export { default as LoginPage } from './Login';

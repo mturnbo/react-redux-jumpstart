@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.14.0
+* *Feature*: Login Form component
+
 #### v.1.11.0
 * *Update*: Reorganized Todo components
 * *Configuration*: Converted json configs to js modules

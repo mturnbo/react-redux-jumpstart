@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import './Container.scss';
 
 const Container = ({ size, children }) => {
   const containerClass = classNames({
-    'uk-container': true,
-    'uk-container-xsmall': size === 'xsmall',
-    'uk-container-small': size === 'small',
-    'uk-container-large': size === 'large',
-    'uk-container-expand': size === 'expand'
+    'jumpstart-container': true,
+    'jumpstart-container-xsmall': size === 'xsmall',
+    'jumpstart-container-small': size === 'small',
+    'jumpstart-container-medium': size === 'medium',
+    'jumpstart-container-large': size === 'large',
+    'jumpstart-container-xlarge': size === 'xlarge'
   });
 
   return (
@@ -19,12 +21,8 @@ const Container = ({ size, children }) => {
 };
 
 Container.propTypes = {
-  size: PropTypes.oneOf(['xsmall', 'small', 'large', 'expand']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge', 'expand']).isRequired,
   children: PropTypes.node.isRequired
-};
-
-Container.defaultProps = {
-  size: 'expand'
 };
 
 export default Container;

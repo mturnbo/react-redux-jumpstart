@@ -14,7 +14,7 @@ const AboutPage = () => {
   });
 
   return (
-    <Container size="small">
+    <Container size="large">
       <Content title="About Us" text={text} />
     </Container>
   );

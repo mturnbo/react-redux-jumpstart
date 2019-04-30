@@ -7,7 +7,7 @@ import {
 import profiles from 'test/fixtures/profiles.json';
 
 const CardsPage = () => (
-  <Container size="small">
+  <Container size="large">
     <div className="uk-child-width-1-2@s uk-grid" data-uk-grid>
       <div className="uk-first-column">
         <Card

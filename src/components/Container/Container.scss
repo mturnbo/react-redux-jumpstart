@@ -1,0 +1,40 @@
+.jumpstart-container {
+	box-sizing: content-box;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media (min-width: 960px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@media (min-width: 640px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media (min-width: 380px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.jumpstart-container-xsmall {
+	max-width: 250px
+}
+
+.jumpstart-container-small {
+	max-width: 400px
+}
+
+.jumpstart-container-medium {
+	max-width: 600px
+}
+
+.jumpstart-container-large {
+	max-width: 900px
+}
+
+.jumpstart-container-xlarge {
+	max-width: 1200px
+}

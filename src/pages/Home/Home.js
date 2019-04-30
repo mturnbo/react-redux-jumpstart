@@ -12,7 +12,7 @@ const HomePage = () => {
   });
 
   return (
-    <Container size="small">
+    <Container size="large">
       <Content title="Home" text={text} />
     </Container>
   );
