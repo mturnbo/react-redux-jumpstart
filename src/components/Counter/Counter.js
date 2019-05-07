@@ -16,7 +16,7 @@ const Counter = () => {
   };
 
   return (
-    <div className="jumpstart-counter">
+    <div className="jumpstart__counter">
       <h2>Counter</h2>
       <div className="count">{count}</div>
       <Button label="-" onClick={() => decrement()} />

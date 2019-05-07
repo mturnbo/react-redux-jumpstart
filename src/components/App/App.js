@@ -3,7 +3,8 @@ import { HashRouter as Router } from 'react-router-dom';
 import {
   NavBar,
   NotificationContainer,
-  ModalContainer
+  ModalContainer,
+  DebugLogger
 } from 'components/';
 // TODO: Figure out why this alias doesn't work
 import menu from '../../config/menu.json';
@@ -17,6 +18,7 @@ const App = () => (
       <div className="jumpstart-app-content">
         <AppRoutes />
       </div>
+      <DebugLogger />
       <ModalContainer />
       <NotificationContainer />
     </div>

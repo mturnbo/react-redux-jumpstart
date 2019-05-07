@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { removeNotification } from 'actions/notificationActions';
-import Notification from './Notification';
+import Notification from '../Notification/Notification';
 import './NotificationContainer.scss';
 
 const NotificationContainer = ({ notifications, remove }) => (

@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { loremIpsum } from 'lorem-ipsum';
 import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
+import { appendLog } from 'actions/debugLogActions';
 import Button from 'components/Button';
 import Drop from 'components/Drop';
 import { getNotification } from '../../utils';
 
 const ButtonsPage = props => {
   const displayRandomNotification = () => {
-    props.actions.addNotification(getNotification());
+    props.addNotification(getNotification());
+    props.appendLog('displayed notification');
   };
 
   const displayModal = () => {
-    props.actions.showModal({
+    props.showModal({
       title: 'THIS IS A MODAL',
       content: loremIpsum({
         count: 4,
@@ -24,43 +25,43 @@ const ButtonsPage = props => {
         sentenceUpperBound: 8
       })
     });
+    props.appendLog('displayed modal');
   };
 
-  /* eslint-disable no-console */
   return (
     <div>
       <div className="uk-inline">
-        <Button label="Default" onClick={() => console.log('default')} />
+        <Button label="Default" onClick={() => props.appendLog('default button clicked')} />
         <Drop mode="click">You clicked the default button.</Drop>
       </div>
       <div className="uk-inline">
-        <Button category="primary" label="Primary" onClick={() => console.log('primary')} />
+        <Button category="primary" label="Primary" onClick={() => props.appendLog('primary button clicked')} />
         <Drop mode="click">
           <button className="uk-drop-close uk-align-right" type="button" data-uk-close="true" />
           <p>You clicked the primary button.</p>
         </Drop>
       </div>
       <div className="uk-inline">
-        <Button category="secondary" label="Secondary" onClick={() => console.log('secondary')} />
+        <Button category="secondary" label="Secondary" onClick={() => props.appendLog('secondary button clicked')} />
         <Drop mode="hover">You hovered over the secondary button.</Drop>
       </div>
-      <Button category="danger" label="Danger" onClick={() => console.log('danger')} />
+      <Button category="danger" label="Danger" onClick={() => props.appendLog('danger button clicked')} />
       <Button category="primary" label="Notification" onClick={displayRandomNotification} />
       <Button category="secondary" label="Modal" onClick={displayModal} />
     </div>
   );
-  /* eslint-enable no-console */
 };
 
 ButtonsPage.propTypes = {
-  actions: PropTypes.shape({
-    addNotification: PropTypes.func.isRequired,
-    showModal: PropTypes.func.isRequired
-  }).isRequired
+  addNotification: PropTypes.func.isRequired,
+  showModal: PropTypes.func.isRequired,
+  appendLog: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ addNotification, showModal }, dispatch)
+  addNotification: notification => dispatch(addNotification(notification)),
+  showModal: modal => dispatch(showModal(modal)),
+  appendLog: msg => dispatch(appendLog(msg))
 });
 
 export default connect(null, mapDispatchToProps)(ButtonsPage);

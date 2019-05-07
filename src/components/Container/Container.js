@@ -5,12 +5,12 @@ import './Container.scss';
 
 const Container = ({ size, children }) => {
   const containerClass = classNames({
-    'jumpstart-container': true,
-    'jumpstart-container-xsmall': size === 'xsmall',
-    'jumpstart-container-small': size === 'small',
-    'jumpstart-container-medium': size === 'medium',
-    'jumpstart-container-large': size === 'large',
-    'jumpstart-container-xlarge': size === 'xlarge'
+    jumpstart__container: true,
+    'jumpstart__container-xsmall': size === 'xsmall',
+    'jumpstart__container-small': size === 'small',
+    'jumpstart__container-medium': size === 'medium',
+    'jumpstart__container-large': size === 'large',
+    'jumpstart__container-xlarge': size === 'xlarge'
   });
 
   return (

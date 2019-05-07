@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Content.scss';
 
 const Content = ({ title, text }) => (
-  <div className="jumpstart-content">
+  <div className="jumpstart__content">
     {title && <h1 className="uk-heading-divider">{title}</h1>}
     <div className="text">{text}</div>
   </div>
