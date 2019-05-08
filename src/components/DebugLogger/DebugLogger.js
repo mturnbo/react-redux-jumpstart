@@ -10,16 +10,13 @@ const DebugLogger = ({ debugLog, clear }) => (
     <div className="jumpstart-debug-logger-items">
       {debugLog.map(item => (
         <div className="item" key={item.id}>
-          {item.logDate}
-          {' '}
--
-          {' '}
-          {item.msg}
+          <span className="item-date">{item.logDate}</span>
+          <span className="item-msg">{item.msg}</span>
         </div>
       ))}
     </div>
     <div>
-      <Button category="secondary" onClick={clear} label="Clear" />
+      <Button category="secondary" colors={{ background: '#FF9700', text: '#000000' }} onClick={clear} label="Clear" />
     </div>
   </div>
 );
@@ -32,7 +29,7 @@ DebugLogger.propTypes = {
 const mapStateToProps = state => ({ debugLog: state.debugLog });
 
 const mapDispatchToProps = dispatch => ({
-  clearLog: () => dispatch(clearLog)
+  clear: () => dispatch(clearLog())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DebugLogger);

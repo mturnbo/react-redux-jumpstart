@@ -1,5 +1,10 @@
 # React Redux Jumpstart
 
+#### v.1.15.0
+* *Feature*: Added colors as props for Button component
+* *Update*: Refactored Modal component
+* *Fix*: Fixed clear log functionality for DebugLogger component
+
 #### v.1.14.0
 * *Feature*: Login Form component
 

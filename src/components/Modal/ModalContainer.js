@@ -1,38 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { showModal, hideModal } from 'actions/modalActions';
+import { hideModal as hideModalAction } from 'actions/modalActions';
 import Modal from './Modal';
 
-class ModalContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.closeModal = this.closeModal.bind(this);
-  }
-
-  closeModal() {
-    this.props.actions.hideModal(); // eslint-disable-line react/destructuring-assignment
-  }
-
-  render() {
-    const { display, title, content } = this.props;
-    return (
-      <div className="jumpstart-modal-container">
-        {display && <Modal title={title} content={content} onDismissClick={this.closeModal} />}
-      </div>
-    );
-  }
-}
+const ModalContainer = ({ display, title, content, hideModal }) => (
+  <div className="jumpstart-modal-container">
+    {display && <Modal title={title} content={content} onDismissClick={hideModal} />}
+  </div>
+);
 
 ModalContainer.propTypes = {
-  actions: PropTypes.shape({
-    showModal: PropTypes.func.isRequired,
-    hideModal: PropTypes.func.isRequired
-  }).isRequired,
   display: PropTypes.bool.isRequired,
   title: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+	hideModal: PropTypes.func.isRequired
 };
 
 ModalContainer.defaultProps = {
@@ -41,7 +23,7 @@ ModalContainer.defaultProps = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ showModal, hideModal }, dispatch)
+  hideModal: () => dispatch(hideModalAction())
 });
 
 const mapStateToProps = state => {

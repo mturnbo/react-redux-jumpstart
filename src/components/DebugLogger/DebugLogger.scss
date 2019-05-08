@@ -15,5 +15,15 @@
 		font-family: "Courier New", monospace;
 		font-size: 10px;
 		color: #F9CD0B;
+
+		.item-date {
+			&:after {
+				content: " -> "
+			}
+		}
+
+		.item-msg {
+
+		}
 	}
 }
