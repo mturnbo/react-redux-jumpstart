@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.16.0
+* *Feature*: Button icons
+
 #### v.1.15.0
 * *Feature*: Added colors as props for Button component
 * *Update*: Refactored Modal component

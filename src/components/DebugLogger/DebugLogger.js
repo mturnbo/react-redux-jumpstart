@@ -8,6 +8,7 @@ import './DebugLogger.scss';
 const DebugLogger = ({ debugLog, clear }) => (
   <div className="jumpstart-debug-logger">
     <div className="jumpstart-debug-logger-items">
+      <div className="jumpstart-debug-logger-title">DEBUG LOG</div>
       {debugLog.map(item => (
         <div className="item" key={item.id}>
           <span className="item-date">{item.logDate}</span>
@@ -16,7 +17,13 @@ const DebugLogger = ({ debugLog, clear }) => (
       ))}
     </div>
     <div>
-      <Button category="secondary" colors={{ background: '#FF9700', text: '#000000' }} onClick={clear} label="Clear" />
+      <Button
+        category="secondary"
+        colors={{ background: '#FF9700', text: '#000000' }}
+        onClick={clear}
+        label="Clear"
+        icon="trash"
+      />
     </div>
   </div>
 );

@@ -1,23 +1,34 @@
 # React Redux Jumpstart
 
 This is a boilerplate for building a React / Redux application.
+It uses UIKit for styling.
 
 ## Components
 * Button
 * Card - avatars from https://icons8.com/icon/set/avatar/color
-* Dismiss Button
-* Modal
-* Notification
 * Content
+* Counter
+* Debug Logger
+* Dismiss Button
+* List
+* Modal
+* Navigation Bar
+* Notification
+* Parallax
+* Progress Bar
+* Todo List
 
 ## Pages
 * Home
 * About
 * Contact
+* Buttons
+* Components
 
 ## Features:
 * React
 * Redux
+* UIKit
 * Babel - ES6, ESNext, Airbnb and React/Recommended config
 * Webpack 4 with Webpack Dev Server
 * ESLint with Airbnb's style 

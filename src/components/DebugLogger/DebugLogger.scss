@@ -7,8 +7,17 @@
 	display: flex;
 	justify-content: flex-start;
 
+	.jumpstart-debug-logger-title {
+		color: #999999;
+		font-size: 12px;
+		text-transform: uppercase;
+		border-bottom: 1px solid #999999;
+		margin-bottom: 5px;
+	}
+
 	.jumpstart-debug-logger-items {
 		flex-grow: 1;
+		margin-right: 10px;
 	}
 
 	.item {

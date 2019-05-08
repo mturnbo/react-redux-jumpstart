@@ -9,7 +9,7 @@ const actions = bindActionCreators({
   ...notificationActions,
   ...modalActions,
   ...todoActions,
-	...debugLogActions
+  ...debugLogActions
 }, store.dispatch);
 
 export default actions;

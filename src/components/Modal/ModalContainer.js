@@ -14,7 +14,7 @@ ModalContainer.propTypes = {
   display: PropTypes.bool.isRequired,
   title: PropTypes.string,
   content: PropTypes.string,
-	hideModal: PropTypes.func.isRequired
+  hideModal: PropTypes.func.isRequired
 };
 
 ModalContainer.defaultProps = {

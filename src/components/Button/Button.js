@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Button.scss';
 
-const Button = ({ category, label, colors, onClick }) => {
+const Button = ({ category, label, icon, colors, onClick }) => {
   const getStyle = () => {
     if (colors) {
       return {
@@ -15,11 +16,12 @@ const Button = ({ category, label, colors, onClick }) => {
   return (
     <button
       type="button"
-      className={'uk-button uk-button-' + category}
+      className={`uk-button uk-button-${category} jumpstart-button`}
       style={getStyle()}
       onClick={onClick}
     >
       {label}
+      {icon && <span className="jumpstart-button-icon" uk-icon={icon} />}
     </button>
   );
 };
@@ -27,6 +29,7 @@ const Button = ({ category, label, colors, onClick }) => {
 Button.propTypes = {
   category: PropTypes.string,
   label: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   colors: PropTypes.shape({
     background: PropTypes.string,
     text: PropTypes.string,
@@ -36,6 +39,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   category: 'default',
+  icon: null,
   colors: null
 };
 
