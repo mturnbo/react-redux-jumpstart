@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const paths = require('./paths');
 
+const env = process.env.NODE_ENV;
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: `${paths.APP}/index.html`,
   filename: 'index.html',
@@ -19,7 +21,7 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
 ]);
 
 module.exports = {
-  mode: 'development',
+  mode: env,
   entry: {
     main: `${paths.APP}/index.js`
   },
