@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.18.0
+* *Feature*: Accordian component
+
 #### v.1.16.0
 * *Feature*: Button icons
 

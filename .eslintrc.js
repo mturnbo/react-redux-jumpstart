@@ -45,6 +45,7 @@ module.exports = {
 		}],
 		'no-return-assign': 0,
 		'react/destructuring-assignment': 0,
+		'react/jsx-one-expression-per-line': 0,
 		'object-curly-newline': 0,
 		'jsx-a11y/click-events-have-key-events': 0,
 		'jsx-a11y/no-noninteractive-element-interactions': 0,
