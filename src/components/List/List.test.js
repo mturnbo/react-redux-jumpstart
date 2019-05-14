@@ -1,8 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { arrayFill } from '../../utils';
 import List from './List';
 
-const listItems = Array(5).fill().map((val, idx) => `List Item ${idx}`);
+const listItems = arrayFill(7, i => `List Item ${i}`);
 
 describe('List', () => {
   test('should match snapshot', () => {

@@ -1,5 +1,9 @@
 # React Redux Jumpstart
 
+#### v.1.18.0
+* *Feature*: Carousel component based on UIKit Slider
+* *Update*: Added `arrayFill` function to utils
+
 #### v.1.16.0
 * *Feature*: Button icons
 

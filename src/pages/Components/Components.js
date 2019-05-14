@@ -6,11 +6,14 @@ import {
   ProfileCard,
   ProgressBar,
   List,
-  Parallax
+  Parallax,
+  Carousel
 } from 'components';
 import profiles from 'test/fixtures/profiles.json';
+import { arrayFill } from '../../utils';
 
-const listItems = Array(5).fill().map((val, idx) => `List Item ${idx + 1}`);
+const listItems = arrayFill(5, i => `List Item ${i + 1}`);
+const listImages = arrayFill(10, i => `https://picsum.photos/id/1${i}/200/300/`);
 
 const ComponentsPage = () => {
   const [progress, setProgress] = useState(10);
@@ -32,7 +35,8 @@ const ComponentsPage = () => {
       <hr />
       <h2>Progress Bar</h2>
       <ProgressBar value={progress} max={100} />
-      <Button category="primary" label="More Progress" onClick={() => setProgress(progress + 5)} />
+      <Button category="primary" colors={{ background: '#006600', text: '#FFFFFF' }} label="More Progress" onClick={() => setProgress(progress + 5)} />
+      <Button category="primary" label="Less Progress" onClick={() => setProgress(progress - 5)} />
       <Button category="danger" label="Zero Progress" onClick={() => setProgress(0)} />
       <hr />
       <h2>Parallax</h2>
@@ -56,6 +60,8 @@ const ComponentsPage = () => {
         </div>
       </div>
       <hr />
+      <h2>Carousel</h2>
+      <Carousel images={listImages} />
     </Container>
   );
 };

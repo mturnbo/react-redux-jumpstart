@@ -25,7 +25,7 @@ export function generatePeopleList(c) {
     end: new Date(2001, 11, 30)
   };
 
-  return Array(c).fill().map((val, idx) => ({
+  return Array(c).fill(null).map((val, idx) => ({
     id: idx,
     name: _sample(names) + val,
     birthDate: randomDate(dateRange.start, dateRange.end).toISOString().substring(0, 10),
@@ -37,6 +37,11 @@ export function generatePeopleList(c) {
       sentenceUpperBound: 8
     })
   }));
+}
+
+export function arrayFill(n, f) {
+  // eslint-disable-next-line prefer-spread
+  return Array.apply(null, { length: n }).map(Number.call, Number).map(i => f(i));
 }
 
 export function fadeOut(e, containerClass, intervalTimeout = 30) {
