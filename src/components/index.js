@@ -11,3 +11,4 @@ export { default as List } from './List';
 export { default as ProgressBar } from './ProgressBar';
 export { default as Parallax } from './Parallax';
 export { default as DebugLogger } from './DebugLogger';
+export { default as Accordian } from './Accordian';

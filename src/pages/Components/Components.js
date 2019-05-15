@@ -6,14 +6,18 @@ import {
   ProfileCard,
   ProgressBar,
   List,
-  Parallax
+  Parallax,
+  Accordian
 } from 'components';
 import profiles from 'test/fixtures/profiles.json';
+import { generateItemList } from '../../utils';
 
-const listItems = Array(5).fill().map((val, idx) => `List Item ${idx + 1}`);
+const listItems = generateItemList(5);
 
 const ComponentsPage = () => {
   const [progress, setProgress] = useState(10);
+  const listTitles = listItems.map(item => item.title);
+
   return (
     <Container size="large">
       <h2>Cards</h2>
@@ -43,19 +47,21 @@ const ComponentsPage = () => {
       <h2>List</h2>
       <div className="uk-child-width-1-4@m uk-grid" data-uk-grid>
         <div className="uk-first-column">
-          <List items={listItems} />
+          <List items={listTitles} />
         </div>
         <div>
-          <List items={listItems} modifier="bullet" />
+          <List items={listTitles} modifier="bullet" />
         </div>
         <div>
-          <List items={listItems} modifier="divider" />
+          <List items={listTitles} modifier="divider" />
         </div>
         <div>
-          <List items={listItems} modifier="striped" />
+          <List items={listTitles} modifier="striped" />
         </div>
       </div>
       <hr />
+      <h2>Accordian</h2>
+      <Accordian items={listItems} />
     </Container>
   );
 };

@@ -19,17 +19,40 @@ export function randomDate(start, end) {
   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 }
 
-export function generatePeopleList(c) {
+export function arrayFill(n, f) {
+  // eslint-disable-next-line prefer-spread
+  return Array.apply(null, { length: n }).map(Number.call, Number).map(i => f(i));
+}
+
+export function generateItemList(n) {
+  return arrayFill(n, i => (
+    {
+      title: `Item ${i + 1}`,
+      content: loremIpsum({
+        count: 8,
+        units: 'sentences',
+        sentenceLowerBound: 6,
+        sentenceUpperBound: 12
+      })
+    }
+  ));
+}
+
+export function generateImageList(n) {
+  return arrayFill(n, i => `https://picsum.photos/id/1${i}/200/300/`);
+}
+
+export function generatePeopleList(n) {
   const dateRange = {
     start: new Date(1980, 0, 1),
     end: new Date(2001, 11, 30)
   };
 
-  return Array(c).fill().map((val, idx) => ({
-    id: idx,
-    name: _sample(names) + val,
+  return arrayFill(n, i => ({
+    id: i,
+    name: _sample(names),
     birthDate: randomDate(dateRange.start, dateRange.end).toISOString().substring(0, 10),
-    image: '/assets/images/avatars/user-generic.png',
+    avatar: '/assets/images/avatars/user-generic.png',
     bio: loremIpsum({
       count: 4,
       units: 'sentences',
@@ -38,6 +61,7 @@ export function generatePeopleList(c) {
     })
   }));
 }
+
 
 export function fadeOut(e, containerClass, intervalTimeout = 30) {
   const target = e.target.closest(containerClass);
