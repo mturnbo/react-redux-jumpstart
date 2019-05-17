@@ -8,7 +8,8 @@ import {
   TodoPage,
   BigListPage,
   BigTablePage,
-  LoginPage
+  LoginPage,
+  TokenPage,
 } from 'pages';
 
 class AppRoutes extends React.Component {
@@ -23,6 +24,7 @@ class AppRoutes extends React.Component {
         <Route name="biglist" path="/biglist" component={BigListPage} />
         <Route name="bigtable" path="/bigtable" component={BigTablePage} />
         <Route name="login" path="/login" component={LoginPage} />
+        <Route name="token" path="/token" component={TokenPage} />
         <Redirect from="/" to="home" />
       </Switch>
     );

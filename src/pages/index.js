@@ -7,3 +7,4 @@ export { default as ComponentsPage } from './Components';
 export { default as BigListPage } from './BigList';
 export { default as BigTablePage } from './BigTable';
 export { default as LoginPage } from './Login';
+export { default as TokenPage } from './Token';
