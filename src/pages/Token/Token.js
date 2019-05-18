@@ -11,11 +11,6 @@ import {
 } from '../../reducers/coindeskApiReducer';
 
 class TokensPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.shouldComponentRender = this.shouldComponentRender.bind(this);
-  }
-
   componentWillMount() {
     const { fetchToken } = this.props;
     fetchToken();
@@ -24,10 +19,13 @@ class TokensPage extends React.Component {
   render() {
     const { tokenData, pending } = this.props;
     if (pending) {
-      return <div data-uk-spinner />;
+      return <div>Loading...</div>;
     }
     return (
-      <TokenCard {...tokenData} />
+      <div>
+        <TokenCard {...tokenData.USD} />
+        <TokenCard {...tokenData.EUR} />
+      </div>
     );
   }
 }
@@ -41,8 +39,12 @@ TokensPage.propTypes = {
     symbol: PropTypes.string
   }).isRequired,
   pending: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
+  error: PropTypes.string,
   fetchToken: PropTypes.func.isRequired
+};
+
+TokensPage.defaultProps = {
+  error: null
 };
 
 const mapStateToProps = state => ({

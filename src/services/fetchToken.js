@@ -13,7 +13,7 @@ function fetchToken() {
         if (res.error) {
           throw (res.error);
         }
-        dispatch(fetchTokenSuccess(res.bpi.USD));
+        dispatch(fetchTokenSuccess(res.bpi));
         return res;
       })
       .catch(error => {
