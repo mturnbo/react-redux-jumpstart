@@ -57,6 +57,8 @@ module.exports = {
       components: paths.COMPONENTS,
       pages: paths.PAGES,
       actions: paths.ACTIONS,
+      reducers: paths.REDUCERS,
+      services: paths.SERVICES,
       test: paths.TEST
     },
     extensions: ['.js', '.json', '.jsx']

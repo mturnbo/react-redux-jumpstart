@@ -4,12 +4,10 @@ import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import { Provider } from 'react-redux';
 import App from 'components/App';
-import configureStore from './store/configureStore';
+import store from './store';
 import 'assets/styles/main.scss';
 
 UIkit.use(Icons);
-
-const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
