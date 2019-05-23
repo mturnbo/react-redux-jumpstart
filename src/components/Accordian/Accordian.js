@@ -15,10 +15,12 @@ const Accordian = ({ items }) => (
 );
 
 Accordian.propTypes = {
-  items: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired
-  }).isRequired
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired
+    })
+  ).isRequired
 };
 
 export default Accordian;

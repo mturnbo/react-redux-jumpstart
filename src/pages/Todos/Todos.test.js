@@ -2,9 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import TodoPage from './index';
-import configureStore from '../../store/configureStore';
-
-const store = configureStore();
+import store from '../../store';
 
 const wrapper = shallow(
   <Provider store={store}>

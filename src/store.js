@@ -1,4 +1,11 @@
-import { createStore } from 'redux';
-import RootReducer from './reducers';
+import { configureStore, saveState, loadState } from './store/configureStore';
 
-export default (initialState) => createStore(RootReducer, initialState);
+const appStateKey = 'rrj-state';
+const savedState = loadState(appStateKey);
+const store = configureStore(savedState);
+
+store.subscribe(() => {
+  saveState(store.getState(), appStateKey);
+});
+
+export default store;

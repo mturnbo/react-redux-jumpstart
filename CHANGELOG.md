@@ -1,5 +1,9 @@
 # React Redux Jumpstart
 
+#### v.1.19.0
+* *Feature*: Added User API state management
+* *Feature*: Save state to session storage
+
 #### v.1.18.0
 * *Feature*: Accordian component
 
