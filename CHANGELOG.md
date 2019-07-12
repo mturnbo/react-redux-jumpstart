@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.21.1
+* *Fix*: Removed unnecessary menu toggle icon
+
 #### v.1.19.0
 * *Feature*: Added User API state management
 * *Feature*: Save state to session storage

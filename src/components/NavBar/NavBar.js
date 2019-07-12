@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import NavBarDropdown from './NavBarDropdown';
 import './NavBar.scss';
 
-// TODO: Figure out why menu icon toggle doesn't work
-
 const NavBar = ({ menu }) => {
   const renderMenuItems = menu.map(item => (
     <li className="uk-text-large" key={`menu-${item.label.replace(' ', '').toLowerCase()}`}>
@@ -37,13 +35,10 @@ const NavBar = ({ menu }) => {
               className="uk-navbar-toggle uk-hidden@s"
               data-uk-navbar-toggle-icon="true"
               data-uk-toggle="target: #sidenav"
-            >
-              <span className="uk-margin-small-right" data-uk-icon="menu" />
-            </a>
+            />
           </div>
         </nav>
       </header>
-
       <div id="sidenav" data-uk-offcanvas="flip: true" className="uk-offcanvas">
         <div className="uk-offcanvas-bar">
           <ul className="uk-nav">
