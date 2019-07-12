@@ -2,22 +2,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Button from 'components/Button';
-
-const labels = {
-  default: 'Hello',
-  success: 'Succes',
-  error: 'Error',
-  warning: 'Warning',
-  click: 'Click Me'
-};
+import labels from 'test/fixtures/labels.json';
 
 storiesOf('Button', module)
-  .add('default', () => (
+  .add('Default', () => (
     <Button label={labels.default} />
   ))
-  .add('error', () => (
-    <Button category="error" label={labels.error} />
+  .add('Error', () => (
+    <Button category="danger" label={labels.error} />
   ))
-  .add('with click action', () => (
-    <Button onClick={action('clicked')} label={labels.click} />
+  .add('With Click Action', () => (
+    <Button category="secondary" onClick={action('clicked')} label={labels.click} />
   ));

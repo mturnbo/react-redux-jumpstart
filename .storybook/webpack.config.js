@@ -21,7 +21,8 @@ module.exports = {
 		alias: {
 			assets: ASSETS,
 			components: path.join(APP, 'components'),
-			pages:  path.join(APP, 'pages')
+			pages:  path.join(APP, 'pages'),
+      test: path.join(BASE, 'test')
 		},
 		extensions: ['.js', '.json', '.jsx']
 	}
