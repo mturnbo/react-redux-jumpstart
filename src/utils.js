@@ -62,46 +62,22 @@ export function generatePeopleList(n) {
   }));
 }
 
+export function getTransitionEvent(el) {
+  const transitions = {
+    transition: 'transitionend',
+    OTransition: 'oTransitionEnd',
+    MozTransition: 'transitionend',
+    WebkitTransition: 'webkitTransitionEnd'
+  };
 
-export function fadeOut(e, containerClass, intervalTimeout = 30) {
-  const target = e.target.closest(containerClass);
-  return new Promise((resolve) => {
-    if (target) {
-      const effect = setInterval(() => {
-        if (!target.style.opacity) {
-          target.style.opacity = 1;
-        }
-        if (target.style.opacity > 0) {
-          target.style.opacity -= 0.1;
-        } else {
-          clearInterval(effect);
-          resolve('faded');
-        }
-      }, intervalTimeout);
-    } else {
-      resolve('no-effect-target');
+  let transitionEvent = null;
+  Object.keys(transitions).forEach(key => {
+    if (el.style[key] !== undefined) {
+      transitionEvent = transitions[key];
     }
   });
-}
 
-export function slideUp(e, containerClass, intervalTimeout = 10) {
-  const target = e.target.closest(containerClass);
-  return new Promise((resolve) => {
-    if (target) {
-      let newHeight = target.offsetHeight;
-      const effect = setInterval(() => {
-        if (newHeight > 0) {
-          newHeight -= 5;
-          target.style.height = `${newHeight}px`;
-        } else {
-          clearInterval(effect);
-          resolve('slid-up');
-        }
-      }, intervalTimeout);
-    } else {
-      resolve('no-effect-target');
-    }
-  });
+  return transitionEvent;
 }
 
 export function getNotification(type) {

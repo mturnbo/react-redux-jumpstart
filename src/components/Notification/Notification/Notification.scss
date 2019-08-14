@@ -1,52 +1,66 @@
 @import 'assets/styles/modules/all';
 
 .jumpstart-notification-item {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	box-shadow: $shadow;
+  background-color: whitesmoke;
+  padding: .5rem .5rem .5rem .5rem;
+  position: relative;
+  max-height: 200px;
+  overflow-y: hidden;
+
+  &.primary {
+    background-color: $primary;
+  }
+
+  &.link {
+    background-color: $link;
+    color: $white;
+  }
+
+  &.info {
+    background-color: $info;
+    color: $white; }
+
+  &.success {
+    background-color: $success;
+    color: $white;
+  }
+
+  &.warning {
+    background-color: $warning;
+    color: $black;
+  }
+
+  &.danger {
+    background-color: $danger;
+    color: $white;
+  }
+}
+
+.notification-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  > .jumpstart-dismiss {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+}
+
+.notification-title {
+  align-content: stretch;
+  flex: 1;
 }
 
 .notification-body {
-	jumpstart-background-color: whitesmoke;
-	border-radius: $border-radius;
-	padding: 1.25rem 2.5rem 1.25rem 1.5rem;
-	position: relative;
+  margin-left: 15px;
 
 	a {
 		color: currentColor;
 		text-decoration: underline;
-	}
-
-	> .jumpstart-dismiss {
-		position: absolute;
-		right: 0.5rem;
-		top: 0.5rem;
-	}
-
-	&.primary {
-		background-color: $primary;
-	}
-
-	&.link {
-		background-color: $link;
-		color: $white;
-	}
-
-	&.info {
-		background-color: $info;
-		color: $white; }
-
-	&.success {
-		background-color: $success;
-		color: $white;
-	}
-
-	&.warning {
-		background-color: $warning;
-		color: $black;
-	}
-
-	&.danger {
-		background-color: $danger;
-		color: $white;
 	}
 }

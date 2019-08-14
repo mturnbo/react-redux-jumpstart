@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { fadeOut, slideUp } from '../../utils';
+import { getTransitionEvent } from '../../utils';
 import './Dismiss.scss';
 
+const containerClass = '.dismiss-effect';
+
 const Dismiss = ({ dismissCallback, effect }) => {
-  const dismiss = (e) => {
-    const containerClass = '.dismiss-effect';
-    if (containerClass) {
-      if (effect === 'slideUp') {
-        slideUp(e, containerClass).then(dismissCallback);
-      } else {
-        fadeOut(e, containerClass).then(dismissCallback);
-      }
-    } else {
-      dismissCallback();
-    }
+  const dismiss = e => {
+    const container = e.target.closest(containerClass);
+    const transitionEvent = getTransitionEvent(container);
+    container.addEventListener(transitionEvent, dismissCallback, false);
+    effect === 'slideUp' && container.classList.add('transition-height-hidden');
+    effect === 'fadeout' && container.classList.add('transition-fadeout');
   };
 
   return (

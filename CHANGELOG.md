@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.22
+* *Fix*: Fixed slideup transition and callback for notification dismissmal
+
 #### v.1.21.1
 * *Fix*: Removed unnecessary menu toggle icon
 

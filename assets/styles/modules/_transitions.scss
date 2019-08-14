@@ -1,9 +1,27 @@
+$transition-time: 0.4s;
+
 .transition-height {
-	-moz-transition: height .5s;
-	-ms-transition: height .5s;
-	-o-transition: height .5s;
-	-webkit-transition: height .5s;
-	transition: height .5s;
-	height: 0;
-	overflow: hidden;
+	-moz-transition: max-height $transition-time ease-out, padding $transition-time ease-out;
+	-o-transition: max-height $transition-time ease-out, padding $transition-time ease-out;
+	-webkit-transition: max-height $transition-time ease-out, padding $transition-time ease-out;
+  transition: max-height $transition-time ease-out, padding $transition-time ease-out;
+	overflow-y: hidden;
+}
+
+.transition-height-hidden {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.transition-fadein, .transition-fadeout {
+  opacity: 0;
+  -moz-transition: opacity $transition-time ease-out;
+  -o-transition: opacity $transition-time ease-out;
+  -webkit-transition: opacity $transition-time ease-out;
+  transition: opacity $transition-time ease-out;
+}
+
+.transition-fadein {
+  opacity: 1;
 }
