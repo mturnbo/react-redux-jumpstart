@@ -1,7 +1,11 @@
 # React Redux Jumpstart
 
+#### v.1.22.1
+* *Update*: Added getCSSEvent utility function
+* *Fix*: Fixed dismiss for Modal component
+
 #### v.1.22
-* *Fix*: Fixed slideup transition and callback for notification dismissmal
+* *Fix*: Fixed slideup transition and callback for notification dismissal
 
 #### v.1.21.1
 * *Fix*: Removed unnecessary menu toggle icon

@@ -2,6 +2,21 @@ import { sample as _sample } from 'lodash';
 import names from 'test/fixtures/names.json';
 import { loremIpsum } from 'lorem-ipsum';
 
+const events = {
+  animation: {
+    animation: 'animationend',
+    OAnimation: 'oAnimationEnd',
+    MozAnimation: 'animationend',
+    WebkitAnimation: 'webkitAnimationEnd'
+  },
+  transition: {
+    transition: 'transitionend',
+    OTransition: 'oTransitionEnd',
+    MozTransition: 'transitionend',
+    WebkitTransition: 'webkitTransitionEnd'
+  }
+};
+
 export function getRandomIntegers(size, max, collection = 'set') {
   const randomNums = new Set([]);
   while (randomNums.size < size) {
@@ -62,22 +77,16 @@ export function generatePeopleList(n) {
   }));
 }
 
-export function getTransitionEvent(el) {
-  const transitions = {
-    transition: 'transitionend',
-    OTransition: 'oTransitionEnd',
-    MozTransition: 'transitionend',
-    WebkitTransition: 'webkitTransitionEnd'
-  };
-
-  let transitionEvent = null;
-  Object.keys(transitions).forEach(key => {
+export function getCSSEvent(type, el) {
+  let cssEvent = null;
+  const eventTypes = events[type];
+  Object.keys(eventTypes).forEach(key => {
     if (el.style[key] !== undefined) {
-      transitionEvent = transitions[key];
+      cssEvent = eventTypes[key];
     }
   });
 
-  return transitionEvent;
+  return cssEvent;
 }
 
 export function getNotification(type) {

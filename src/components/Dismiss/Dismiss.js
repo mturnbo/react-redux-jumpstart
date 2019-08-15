@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getTransitionEvent } from '../../utils';
+import { getCSSEvent } from '../../utils';
 import './Dismiss.scss';
 
 const containerClass = '.dismiss-effect';
 
 const Dismiss = ({ dismissCallback, effect }) => {
   const dismiss = e => {
-    const container = e.target.closest(containerClass);
-    const transitionEvent = getTransitionEvent(container);
-    container.addEventListener(transitionEvent, dismissCallback, false);
-    effect === 'slideUp' && container.classList.add('transition-height-hidden');
-    effect === 'fadeout' && container.classList.add('transition-fadeout');
+    if (effect === 'none') {
+      dismissCallback();
+    } else {
+      const container = e.target.closest(containerClass);
+      const transitionEvent = getCSSEvent('transition', container);
+      container.addEventListener(transitionEvent, dismissCallback, false);
+      effect === 'slideUp' && container.classList.add('transition-height-hidden');
+      effect === 'fadeOut' && container.classList.add('transition-fadeout');
+    }
   };
 
   return (
@@ -25,7 +29,7 @@ Dismiss.propTypes = {
 };
 
 Dismiss.defaultProps = {
-  effect: 'slideUp'
+  effect: 'none'
 };
 
 export default Dismiss;
