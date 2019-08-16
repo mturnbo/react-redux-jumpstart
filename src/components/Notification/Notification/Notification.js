@@ -9,7 +9,7 @@ const Notification = ({
   <div className={`jumpstart-notification-item ${type} transition-height dismiss-effect`}>
     <div className="notification-header">
       <div className="notification-title"><h2 className="title is-4">{title}</h2></div>
-      <div><Dismiss dismissCallback={onDismissClick} /></div>
+      <div><Dismiss dismissCallback={onDismissClick} effect="slideUp" /></div>
     </div>
     <div className="notification-body">
       <p>{message}</p>
