@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme/build';
-import NotificationContainer from './NotificationContainer';
+import NotificationContainer from './Notification.container';
 
 const wrapper = shallow(<NotificationContainer />);
 

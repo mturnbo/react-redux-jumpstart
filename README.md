@@ -13,7 +13,7 @@ It uses UIKit for styling.
 * List
 * Modal
 * Navigation Bar
-* Notification
+* NotificationComponent
 * Parallax
 * Progress Bar
 * Todo List

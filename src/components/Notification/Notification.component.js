@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dismiss from 'components/Dismiss';
-import './Notification.scss';
+import './Notification.component.scss';
 
-const Notification = ({
+const NotificationComponent = ({
   type, title, message, onDismissClick
 }) => (
   <div className={`jumpstart-notification-item ${type} transition-height dismiss-effect`}>
@@ -17,15 +17,15 @@ const Notification = ({
   </div>
 );
 
-Notification.propTypes = {
+NotificationComponent.propTypes = {
   type: PropTypes.string,
   title: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  onDismissClick: PropTypes.func.isRequired
+  id: PropTypes.number.isRequired
 };
 
-Notification.defaultProps = {
+NotificationComponent.defaultProps = {
   type: ''
 };
 
-export default Notification;
+export default NotificationComponent;

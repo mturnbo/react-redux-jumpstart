@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme/build';
-import Notification from './Notification';
+import NotificationComponent from './Notification.component';
 
 const mockCallBack = jest.fn();
 
@@ -11,9 +11,9 @@ const testNotification = {
   onDismissClick: mockCallBack
 };
 
-describe('Notification', () => {
+describe('NotificationComponent', () => {
   test('should match snapshot', () => {
-    const wrapper = shallow(<Notification {...testNotification} />);
+    const wrapper = shallow(<NotificationComponent {...testNotification} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

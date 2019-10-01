@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.23
+* *Feature*: Updated notifications to use React Context
+
 #### v.1.22.1
 * *Update*: Added getCSSEvent utility function
 * *Fix*: Fixed dismiss for Modal component
@@ -89,7 +92,7 @@
 * *Feature*: Added Content Generator
 
 #### v.0.8.0
-* *Feature*: Notification fade-out / slide-up on dismiss 
+* *Feature*: NotificationComponent fade-out / slide-up on dismiss 
 
 #### v.0.7.0
 * *Feature*: Navigation component

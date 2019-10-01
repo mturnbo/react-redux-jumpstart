@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loremIpsum } from 'lorem-ipsum';
-import { addNotification } from 'actions/notificationActions';
 import { showModal } from 'actions/modalActions';
 import { appendLog } from 'actions/debugLogActions';
 import Button from 'components/Button';
 import Drop from 'components/Drop';
 import { getNotification } from '../../utils';
+import { useNotificationValue } from 'components/Notification/Notification.context';
 
 const ButtonsPage = props => {
+  const [{ notifications }, dispatch] = useNotificationValue();
   const displayRandomNotification = () => {
     props.addNotification(getNotification());
     props.appendLog('displayed notification');
@@ -46,7 +47,7 @@ const ButtonsPage = props => {
         <Drop mode="hover">You hovered over the secondary button.</Drop>
       </div>
       <Button category="danger" label="Danger" onClick={() => props.appendLog('danger button clicked')} />
-      <Button category="primary" label="Notification" onClick={displayRandomNotification} />
+      <Button category="primary" label="Notification" />
       <Button category="secondary" label="Modal" onClick={displayModal} />
     </div>
   );
