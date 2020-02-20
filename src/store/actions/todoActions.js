@@ -2,7 +2,7 @@ import {
   ADD_TODO,
   REMOVE_TODO,
   TOGGLE_TODO
-} from '../constants/todoConstants';
+} from '../../constants/todoConstants';
 
 export const addTodoItem = text => ({
   type: ADD_TODO,

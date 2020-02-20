@@ -1,5 +1,8 @@
 # React Redux Jumpstart
 
+#### v.1.23.0
+* *Update*: Refactored paths
+
 #### v.1.22.1
 * *Update*: Added getCSSEvent utility function
 * *Fix*: Fixed dismiss for Modal component

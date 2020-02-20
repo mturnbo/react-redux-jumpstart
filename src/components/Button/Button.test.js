@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import labels from 'test/fixtures/labels.json';
+import labels from '@test/fixtures/labels.json';
 import Button from './Button';
 
 const mockCallBack = jest.fn();

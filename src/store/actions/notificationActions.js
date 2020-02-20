@@ -1,8 +1,8 @@
 import {
   ADD_NOTIFICATION,
   REMOVE_NOTIFICATION
-} from '../constants/notificationConstants';
-import createNotification from '../factories/createNotification';
+} from '../../constants/notificationConstants';
+import createNotification from '../../factories/createNotification';
 
 export const addNotification = (options = {}) => ({
   type: ADD_NOTIFICATION,

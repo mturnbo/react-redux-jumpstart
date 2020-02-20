@@ -1,5 +1,5 @@
 import { bindActionCreators } from 'redux';
-import store from '../store/configureStore';
+import store from '../configureStore';
 import * as notificationActions from './notificationActions';
 import * as modalActions from './modalActions';
 import * as todoActions from './todoActions';

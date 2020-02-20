@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { clearLog } from 'actions/debugLogActions';
-import Button from 'components/Button';
+import { clearLog } from '@/store/actions/debugLogActions';
+import Button from '@/components/Button';
 import './DebugLogger.scss';
 
 const DebugLogger = ({ debugLog, clear }) => (

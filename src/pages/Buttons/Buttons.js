@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loremIpsum } from 'lorem-ipsum';
-import { addNotification } from 'actions/notificationActions';
-import { showModal } from 'actions/modalActions';
-import { appendLog } from 'actions/debugLogActions';
-import Button from 'components/Button';
-import Drop from 'components/Drop';
+import { addNotification } from '@/store/actions/notificationActions';
+import { showModal } from '@/store/actions/modalActions';
+import { appendLog } from '@/store/actions/debugLogActions';
+import Button from '@/components/Button';
+import Drop from '@/components/Drop';
 import { getNotification } from '../../utils';
 
 const ButtonsPage = props => {

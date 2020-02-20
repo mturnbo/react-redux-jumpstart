@@ -1,7 +1,7 @@
 import {
   SHOW_MODAL,
   HIDE_MODAL
-} from '../constants/modalConstants';
+} from '../../constants/modalConstants';
 import initialState from '../state/modalState';
 
 export default (state = initialState, action) => {

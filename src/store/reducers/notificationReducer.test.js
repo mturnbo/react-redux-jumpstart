@@ -1,4 +1,4 @@
-import { ADD_NOTIFICATION } from '../constants/notificationConstants';
+import { ADD_NOTIFICATION } from '../../constants/notificationConstants';
 import reducer from './notificationReducer';
 import initialState from '../state/notificationState';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dismiss from 'components/Dismiss';
-import './TodoItem.scss';
 import classNames from 'classnames';
+import Dismiss from '@/components/Dismiss';
+import './TodoItem.scss';
 
 const TodoItem = ({ text, complete, toggle, remove }) => {
   const todoClass = classNames({

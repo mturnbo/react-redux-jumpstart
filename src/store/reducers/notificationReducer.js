@@ -1,7 +1,7 @@
 import {
   ADD_NOTIFICATION,
   REMOVE_NOTIFICATION
-} from '../constants/notificationConstants';
+} from '../../constants/notificationConstants';
 import initialState from '../state/notificationState';
 
 export default (state = initialState, action) => {

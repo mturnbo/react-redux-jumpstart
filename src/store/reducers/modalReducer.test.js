@@ -1,4 +1,4 @@
-import { SHOW_MODAL } from '../constants/modalConstants';
+import { SHOW_MODAL } from '../../constants/modalConstants';
 import reducer from './modalReducer';
 import initialState from '../state/modalState';
 

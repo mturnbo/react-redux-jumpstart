@@ -1,7 +1,7 @@
 import {
   APPEND_LOG,
   CLEAR_LOG
-} from '../constants/logConstants';
+} from '../../constants/logConstants';
 
 export const appendLog = msg => ({
   type: APPEND_LOG,

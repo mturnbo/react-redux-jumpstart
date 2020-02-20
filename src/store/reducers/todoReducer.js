@@ -2,8 +2,8 @@ import {
   ADD_TODO,
   REMOVE_TODO,
   TOGGLE_TODO
-} from '../constants/todoConstants';
-import { generateID } from '../utils';
+} from '../../constants/todoConstants';
+import { generateID } from '../../utils';
 import initialState from '../state/todoState';
 
 export default (state = initialState, action) => {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import profiles from '@test/fixtures/profiles.json';
 import {
   Button,
   Container,
@@ -8,8 +9,7 @@ import {
   List,
   Parallax,
   Accordian
-} from 'components';
-import profiles from 'test/fixtures/profiles.json';
+} from '@/components';
 import { generateItemList } from '../../utils';
 
 const listItems = generateItemList(5);

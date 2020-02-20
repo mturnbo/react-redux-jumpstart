@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const paths = require('./paths');
+const paths = require('./config/paths');
 
 const env = process.env.NODE_ENV;
 
@@ -52,14 +52,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      config: paths.CONFIG,
       assets: paths.ASSETS,
-      components: paths.COMPONENTS,
-      pages: paths.PAGES,
-      actions: paths.ACTIONS,
-      reducers: paths.REDUCERS,
-      services: paths.SERVICES,
-      test: paths.TEST
+      '@test': paths.TEST,
+      '@': paths.APP
     },
     extensions: ['.js', '.json', '.jsx']
   }

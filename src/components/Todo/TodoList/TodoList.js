@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { toggleTodoItem, removeTodoItem } from 'actions/todoActions';
+import { toggleTodoItem, removeTodoItem } from '@/store/actions/todoActions';
 import TodoItem from '../TodoItem/TodoItem';
 import AddTodo from '../AddTodo/AddTodo';
 import './TodoList.scss';

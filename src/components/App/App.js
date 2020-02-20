@@ -5,7 +5,7 @@ import {
   NotificationContainer,
   ModalContainer,
   DebugLogger
-} from 'components/';
+} from '@/components/';
 // TODO: Figure out why this alias doesn't work
 import menu from '../../config/menu.json';
 import AppRoutes from '../../routes';

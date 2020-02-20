@@ -1,8 +1,8 @@
 import {
   APPEND_LOG,
   CLEAR_LOG
-} from '../constants/logConstants';
-import { generateID } from '../utils';
+} from '../../constants/logConstants';
+import { generateID } from '../../utils';
 
 const initialState = [];
 

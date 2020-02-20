@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addTodoItem } from 'actions/todoActions';
+import { addTodoItem } from '@/store/actions/todoActions';
 import './AddTodo.scss';
 
 const AddTodo = ({ add }) => {

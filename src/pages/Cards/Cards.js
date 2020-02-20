@@ -1,10 +1,10 @@
 import React from 'react';
+import profiles from '@test/fixtures/profiles.json';
 import {
   Container,
   Card,
   ProfileCard
-} from 'components';
-import profiles from 'test/fixtures/profiles.json';
+} from '@/components';
 
 const CardsPage = () => (
   <Container size="large">

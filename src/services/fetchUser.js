@@ -2,7 +2,7 @@ import {
   fetchUserPending,
   fetchUserSuccess,
   fetchUserError
-} from '../actions/userActions';
+} from '../store/actions/userActions';
 import store from '../store';
 
 const userExists = id => {

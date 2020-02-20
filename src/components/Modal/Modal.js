@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dismiss from 'components/Dismiss';
+import Dismiss from '@/components/Dismiss';
 import './Modal.scss';
 
 const Modal = ({

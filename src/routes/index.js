@@ -10,7 +10,7 @@ import {
   BigTablePage,
   LoginPage,
   UsersPage
-} from 'pages';
+} from '@/pages';
 
 class AppRoutes extends React.Component {
   render() {

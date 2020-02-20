@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { hideModal as hideModalAction } from 'actions/modalActions';
+import { hideModal as hideModalAction } from '@/store/actions/modalActions';
 import Modal from './Modal';
 
 const ModalContainer = ({ display, title, content, hideModal }) => (

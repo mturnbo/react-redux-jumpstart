@@ -1,7 +1,7 @@
 import {
   SHOW_MODAL,
   HIDE_MODAL
-} from '../constants/modalConstants';
+} from '../../constants/modalConstants';
 
 export const showModal = (options = {}) => ({
   type: SHOW_MODAL,

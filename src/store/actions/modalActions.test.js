@@ -1,4 +1,4 @@
-import { SHOW_MODAL } from '../constants/modalConstants';
+import { SHOW_MODAL } from '../../constants/modalConstants';
 import * as actions from './modalActions';
 
 const testModal = {

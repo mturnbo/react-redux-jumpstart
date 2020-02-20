@@ -40,12 +40,10 @@ module.exports = {
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
+    '@/(.*)$': '<rootDir>/src/$1',
     '^components(.*)$': '<rootDir>/src/components$1',
-    '^pages(.*)$': '<rootDir>/src/pages$1',
-    '^actions(.*)$': '<rootDir>/src/actions$1',
-    '^assets(.*)$': '<rootDir>/assets$1',
-    '^test(.*)$': '<rootDir>/test$1',
-    '^config(.*)$': '<rootDir>/src/config$1'
+    '^@assets(.*)$': '<rootDir>/assets$1',
+    '^@test(.*)$': '<rootDir>/test$1',
   },
   unmockedModulePathPatterns: [
     'react'

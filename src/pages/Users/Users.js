@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import fetchUserAction from 'services/fetchUser';
+import fetchUserAction from '@/services/fetchUser';
 import {
   getUsers,
   getUserPending,
   getUserError
-} from 'reducers/userReducer';
-import UserCard from 'components/Card/UserCard';
+} from '@/store/reducers/userReducer';
+import UserCard from '@/components/Card/UserCard';
 
 class UserPage extends React.Component {
   componentWillMount() {

@@ -1,7 +1,7 @@
 import React from 'react';
-import Container from 'components/Container';
-import Content from 'components/Content';
 import { loremIpsum } from 'lorem-ipsum';
+import Container from '@/components/Container';
+import Content from '@/components/Content';
 
 const HomePage = () => {
   const text = loremIpsum({

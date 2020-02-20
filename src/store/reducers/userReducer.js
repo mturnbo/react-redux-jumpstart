@@ -2,7 +2,7 @@ import {
   FETCH_USER_PENDING,
   FETCH_USER_SUCCESS,
   FETCH_USER_ERROR
-} from '../constants/userConstants';
+} from '../../constants/userConstants';
 import initialState from '../state/userState';
 
 export function userReducer(state = initialState, action) {

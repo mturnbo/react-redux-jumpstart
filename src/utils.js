@@ -1,5 +1,5 @@
 import { sample as _sample } from 'lodash';
-import names from 'test/fixtures/names.json';
+import names from '@test/fixtures/names.json';
 import { loremIpsum } from 'lorem-ipsum';
 
 const events = {
